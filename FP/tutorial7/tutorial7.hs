@@ -27,6 +27,7 @@ split c1 = [c1]
     
 -- 1b. join
 join :: [Command] -> Command
+join [] = Sit
 join [x] = x
 join c = foldl1 (\x y -> x :#: y) c
     
@@ -61,7 +62,7 @@ polygon dis sides = copy sides ((Go dis) :#: (Turn (fromIntegral (360 `div` side
 -- 3. spiral
 spiral :: Distance -> Int -> Distance -> Angle -> Command
 spiral start cycle inc turn = join [(Go ((fromIntegral n) * inc + start)) :#: (Turn turn) | n <- [0..cycle-1]]
-    
+-- check for Go (negative number) and do sth. for this.
     
 -- 4. optimise
 -- Remember that Go does not take negative arguments.
@@ -110,7 +111,18 @@ snowflake x = f x :#: p :#: p :#: f x :#: p :#: p :#: f x
     
     
 -- 7. hilbert
-
+hilbert :: Int -> Command
+hilbert x = l x
+    where 
+        l 0 = Sit
+        l x = n :#: r (x - 1) :#: f 0 :#: p :#: l (x - 1) :#: f 0 :#: l (x - 1)
+            :#: p :#: f 0 :#: r (x - 1) :#: n
+        r 0 = Sit 
+        r x = p :#: l (x - 1) :#: f 0 :#: n :#: r (x - 1) :#: f 0 :#: r (x - 1)
+            :#: n :#: f 0 :#: l (x - 1) :#: p               
+        f 0 = Go 10
+        n   = Turn 90
+        p   = Turn (-90)
     
     --------------------------------------------------
     --------------------------------------------------
@@ -153,9 +165,28 @@ branch x = g x
         f x = f (x - 1) :#: f (x - 1)
         n = Turn 22.5
         p = Turn (-22.5)
-    
-thirtytwo = undefined
-    
-    
+
+thirtytwo :: Int -> Command        
+thirtytwo x = f x :#: n :#: f x :#: n :#: f x :#: n :#: f x
+    where
+        f 0 = Go 10
+        f x = p :#: f (x - 1) :#: n :#: f (x - 1) :#: p :#: f (x - 1) :#: p :#: f (x - 1) :#: n :#: f (x - 1)
+            :#: n :#: f (x - 1) :#: f (x - 1) :#: p :#: f (x - 1) :#: n :#: f (x - 1) :#: n :#: f (x - 1) :#: f (x - 1)
+            :#: n :#: f (x - 1) :#: p :#: f (x - 1) :#: p :#: f (x - 1) :#: f (x - 1) :#: n :#: f (x - 1) :#: f (x - 1)
+            :#: p :#: f (x - 1) :#: f (x - 1) :#: n :#: f (x - 1) :#: n :#: f (x - 1) :#: p :#: f (x - 1) :#: f (x - 1)
+            :#: p :#: f (x - 1) :#: p :#: f (x - 1) :#: n :#: f (x - 1) :#: f (x - 1) :#: p :#: f (x - 1) :#: p :#: f (x - 1)
+            :#: n :#: f (x - 1) :#: n :#: f (x - 1) :#: p :#: f (x - 1) :#: n        
+        n = Turn 90    
+        p = Turn (-90)
+
+rightTree :: Int -> Command
+rightTree x = f x
+    where
+        f 0 = Go 10
+        f x = f (x - 1) :#: f (x - 1) :#: n :#: Branch (n :#: f (x - 1) :#: p :#: f (x - 1) :#: p :#: f (x - 1))
+            :#: p :#: Branch (p :#: f (x - 1) :#: n :#: f (x - 1) :#: n :#: f (x - 1))
+        n = Turn 30
+        p = Turn (-30)
+
 main :: IO ()
-main = display (branch 5)
+main = display (hilbert 5)
