@@ -34,7 +34,7 @@ the previous two programs.
 You can change the functions of the Newton Fractal. But you need to compute by hand a
 derivative for the function you give.
 
-## Function change example
+## ----Function change example
 
 Below comes from the code
 
