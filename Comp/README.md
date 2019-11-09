@@ -5,12 +5,13 @@ You can also modify the starting parameters. Here I used -2 and 2 as bounds, you
 
 To run this program, you need the following packages:
 
-# Grahpics.UI.GLUT
-# Graphics.Rendering.OpenGL
+__Grahpics.UI.GLUT__
+__Graphics.Rendering.OpenGL__
 
 To compile the code, use 
 
-**ghc --make filename**
-**./filename**
+> ghc --make filename
+
+> /filename**
 
 The idea behind the code comes from The Coding Train Episode 21 (On Youtube). 
