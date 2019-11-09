@@ -10,7 +10,7 @@ To run this program, you need the following packages:
 
 To compile the code, use 
 
-# ghc --make filename
-# ./filename
+**ghc --make filename**
+**./filename**
 
 The idea behind the code comes from The Coding Train Episode 21 (On Youtube). 
