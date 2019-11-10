@@ -10,7 +10,7 @@ To compile the code, use
 
 > ghc --make filename
 
-> /filename**
+> ./filename**
 
 The idea behind the code comes from The Coding Train Episode 21 (On Youtube). 
 
