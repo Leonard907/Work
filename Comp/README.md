@@ -17,7 +17,7 @@ The idea behind the code comes from The Coding Train Episode 21 (On Youtube).
 # Julia Set
 
 This program creates several colorful julia sets using the functions created in the 
-Mandelbrot Set code. 
+Mandelbrot Set code. Runtime may be longer as calculation work increases.
 
 More colors are added to the Julia Set, instead of making color change animation.
 
