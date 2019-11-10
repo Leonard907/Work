@@ -10,14 +10,14 @@ To compile the code, use
 
 > ghc --make filename
 
-> /filename**
+> ./filename**
 
 The idea behind the code comes from The Coding Train Episode 21 (On Youtube). 
 
 # Julia Set
 
 This program creates several colorful julia sets using the functions created in the 
-Mandelbrot Set code. 
+Mandelbrot Set code. Runtime may be longer as calculation work increases.
 
 More colors are added to the Julia Set, instead of making color change animation.
 
@@ -39,8 +39,8 @@ derivative for the function you give.
 Below comes from the code
 
 ```haskell
-> g x  = x^8 + 15 * x^4 - 16  -- The original function g(x)
-> g' x = 7 * x^7 + 60 * x^3   -- Function g'(x)
+g x  = x^8 + 15 * x^4 - 16  -- The original function g(x)
+g' x = 7 * x^7 + 60 * x^3   -- Function g'(x)
 ```
 
 You need only change these functions in order to generate different graphs.
