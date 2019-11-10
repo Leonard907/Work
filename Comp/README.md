@@ -39,8 +39,8 @@ derivative for the function you give.
 Below comes from the code
 
 ```haskell
-> g x  = x^8 + 15 * x^4 - 16  -- The original function g(x)
-> g' x = 7 * x^7 + 60 * x^3   -- Function g'(x)
+g x  = x^8 + 15 * x^4 - 16  -- The original function g(x)
+g' x = 7 * x^7 + 60 * x^3   -- Function g'(x)
 ```
 
 You need only change these functions in order to generate different graphs.
