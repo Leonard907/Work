@@ -84,16 +84,18 @@ public class FoxHoundUtils {
         return houndPositions;
     }
 
-    private static String toPosition(int[] coordinates) {
+    public static String toPosition(int[] coordinates) {
         int start = 65;
         StringBuilder position = new StringBuilder();
-        position.append((char) (start + coordinates[0]));
-        position.append(coordinates[1]);
+        position.append((char) (start + coordinates[1]));
+        position.append(coordinates[0] + 1);
         return position.toString();
     }
 
     public static boolean isValidMove(int dim, String[] players, char figure,
                                       String origin, String destination) {
+        if (players == null)
+            throw new NullPointerException();
         if (isValidInput(dim, players, figure, origin, destination)) {
             // Test whether destination is occupied
             if (!contains(destination, players)) {
@@ -134,7 +136,7 @@ public class FoxHoundUtils {
                 return false;
         }
         else
-            return false;
+            throw new IllegalArgumentException();
     }
 
     private static boolean isValidInput(int dim, String[] players, char figure,
@@ -145,7 +147,7 @@ public class FoxHoundUtils {
            3.origin, destination valid & in range
         */
         return isValidPosition(dim, origin) && isValidPosition(dim, destination) &&
-                (figure == 'F' || figure == 'H') && players != null;
+                (figure == 'F' || figure == 'H');
     }
 
     public static boolean isValidPosition(int dim, String position) {
@@ -161,7 +163,7 @@ public class FoxHoundUtils {
         }
     }
 
-    private static boolean contains(String element, String[] array) {
+    public static boolean contains(String element, String[] array) {
         for (String target: array) {
             if (element.equals(target))
                 return true;

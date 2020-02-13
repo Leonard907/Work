@@ -13,19 +13,21 @@ import java.nio.file.Path;
 public class FoxHoundUI {
 
     /** Number of main menu entries. */
-    private static final int MENU_ENTRIES = 4;
+    private static final int MENU_ENTRIES = 5;
     /** Main menu display string. */
     private static final String MAIN_MENU =
-        "\n1. Move\n2. Save\n3. Load\n4. Exit\n\nEnter 1 - 4:";
+        "\n1. Move\n2. AI Move\n3. Save\n4. Load\n5. Exit\n\nEnter 1 - 5:";
 
     /** Menu entry to select a move action. */
     public static final int MENU_MOVE = 1;
+    /** Menu entry to play against AI. */
+    public static final int MENU_AI = 2;
     /** Menu entry to save the game */
-    public static final int MENU_SAVE = 2;
+    public static final int MENU_SAVE = 3;
     /** Menu entry to save the game */
-    public static final int MENU_LOAD = 3;
+    public static final int MENU_LOAD = 4;
     /** Menu entry to terminate the program. */
-    public static final int MENU_EXIT = 4;
+    public static final int MENU_EXIT = 5;
     /** ASCII code of the beginning column coordinate (A) */
     public static final int ASC_A = 65;
 
@@ -57,6 +59,11 @@ public class FoxHoundUI {
         return board;
     }
 
+    /**
+     * Display the board in console
+     * @param players The positions of the players
+     * @param dimension Dimension of the board
+     */
     public static void displayBoard(String[] players, int dimension) {
         /* Print the board
            1. Print row coordinates: ABCD...
@@ -99,6 +106,9 @@ public class FoxHoundUI {
         System.out.println(rowCoordinates);
     }
 
+    /**
+     * The pretty version of initialise board
+     */
     public static String[][] initialiseBoardPretty(String[] players, int dimension) {
         String[][] board = new String[dimension][dimension];
 
@@ -121,6 +131,9 @@ public class FoxHoundUI {
         return board;
     }
 
+    /**
+     * Display board in a fancier way
+     */
     public static void displayBoardFancy(String[] players, int dimension) {
         /* Print the board
            1. Print row coordinates: ABCD...
@@ -174,6 +187,20 @@ public class FoxHoundUI {
         System.out.println(rowCoordinates);
     }
 
+    /**
+     * Divide the input position (String) to an array with the first indicating
+     * its row coordinate and second indicating its column coordinate.
+     * Eg. Input A8, Output {7, 0}.
+     * Explanation:
+     * 0 is the row the character is currently in,
+     * 7 is the column the character is currently in.
+     * We subtract 65 (ASC_A) to each character to obtain its column position
+     * in the initialization of the board.
+     * Valid values are in range: [0, dimension - 1], for the purpose of index
+     * representations with arrays
+     * @param position A string indicating character's position
+     * @return
+     */
     public static int[] parsePosition(String position) {
         try {
             int column = position.charAt(0) - 65; // Coordinates in "ABCD..."
@@ -185,6 +212,12 @@ public class FoxHoundUI {
         }
     }
 
+    /**
+     * Update the position of a figure
+     * @param origin The original position of the character
+     * @param destination The new position of the character
+     * @param players The array of positions of characters
+     */
     public static void updatePosition(String origin, String destination, String[] players) {
         for (int i = 0; i < players.length; i++) {
             if (Arrays.equals(FoxHoundUI.parsePosition(players[i]),
@@ -236,6 +269,15 @@ public class FoxHoundUI {
         return input;
     }
 
+    /**
+     * Prompt the user to enter the move he/she want to make.
+     * Input consists of origin position and destination position
+     * First check if the move is valid. If valid then update the position.
+     * If not valid print an error message and ask the user to enter again.
+     * @param dim Dimension of the board
+     * @param stdIn The Scanner that accepts the input
+     * @return If the move is valid, return the origin and destination.
+     */
     public static String[] positionQuery(int dim, Scanner stdIn) {
         // Prompt input from console
         while (true) {
@@ -255,11 +297,15 @@ public class FoxHoundUI {
         }
     }
 
+    /**
+     * Prompt the user to enter a file path for purposes of saving and loading a game.
+     * @param stdIn The Scanner that accepts the input
+     * @return The file path entered by the user
+     */
     public static Path fileQuery(Scanner stdIn) {
         System.out.println("Enter file path:");
         String fileName = stdIn.nextLine();
-        Path filePath = Paths.get(fileName);
-        return filePath;
+        return Paths.get(fileName);
     }
 }
 
