@@ -24,8 +24,21 @@ public class FoxHoundUtils {
     public static final char FOX_FIELD = 'F';
 
     // HINT Write your own constants here to improve code readability ...
-    public static int DIM;
+    private static int DIM;
 
+    /**
+     * Set the dimension according to keyboard input.
+     * @param dim The dimension user enters.
+     */
+    public static void setDim(int dim) {
+        DIM = dim;
+    }
+
+    /**
+     * Initialise the starting positions of all players with a given dimension
+     * @param dimension The dimension of the board
+     * @return Array of strings that stores all positions of players.
+     */
     public static String[] initialisePositions(int dimension) {
         // Check the dimension is within range
         if (dimension >= MIN_DIM && dimension <= MAX_DIM)
@@ -34,6 +47,12 @@ public class FoxHoundUtils {
             throw new IllegalArgumentException("Not in range [4-26]");
     }
 
+    /**
+     * insert an element into the bottom of an array.
+     * @param element The element you want to add
+     * @param list The original list
+     * @return Array of String that is the result of insertion
+     */
     public static String[] insert(String element, String[] list) {
         // Insert an element to a list
         String[] concat = new String[list.length + 1];
@@ -44,58 +63,86 @@ public class FoxHoundUtils {
         return concat;
     }
 
+    /**
+     * Initialise the position of the fox.
+     * @param dimension Dimension of the board.
+     * @return String indicating the position of the fox
+     */
     private static String initialiseFoxPosition(int dimension) {
         // Initialise positions of fox
-        int start = 65; // The ASCII value of 'A'
         if (dimension % 2 == 0) {
             // Last row starts with a black square
             if ((dimension / 2) % 2 == 0) {
                 // Central position is black
-                return Character.toString((char) (start + dimension / 2)) + Integer.toString(dimension);
+                return Character.toString((char) (FoxHoundUI.ASC_A + dimension / 2)) + Integer.toString(dimension);
             }
             else {
                 // Central position is white, fox is on the right
-                return Character.toString((char) (start + dimension / 2 + 1)) + Integer.toString(dimension);
+                return Character.toString((char) (FoxHoundUI.ASC_A + dimension / 2 + 1)) + Integer.toString(dimension);
             }
         }
         else {
             // Last row starts with a white square
             if ((dimension / 2) % 2 == 0) {
                 // Central position is white, fox is on the right
-                return Character.toString((char) (start + dimension / 2 + 1)) + Integer.toString(dimension);
+                return Character.toString((char) (FoxHoundUI.ASC_A + dimension / 2 + 1)) + Integer.toString(dimension);
             }
             else {
                 // Central position is black
-                return Character.toString((char) (start + dimension / 2)) + Integer.toString(dimension);
+                return Character.toString((char) (FoxHoundUI.ASC_A + dimension / 2)) + Integer.toString(dimension);
             }
         }
     }
 
+    /**
+     * initialise hound positions for all hounds
+     * @param dimension Dimension of the board.
+     * @return Array of String indicating the positions of the hounds
+     */
     private static String[] initialiseHoundPositions(int dimension) {
-        // Initialise positions of hounds
-        int start = 65;
+        // Initialise positions of hounds\
         String[] houndPositions = new String[dimension / 2];
         for (int i = 0; i < dimension; i++) {
             if (i % 2 == 1) {
                 // black square, place a hound
-                houndPositions[i / 2] = Character.toString((char) (start + i)) + "1";
+                houndPositions[i / 2] = Character.toString((char) (FoxHoundUI.ASC_A + i)) + "1";
             }
         }
         return houndPositions;
     }
 
-    public static String toPosition(int[] coordinates) {
-        int start = 65;
+    /**
+     * Convert an integer representation of figure's representation to a string.
+     * Example:
+     * {0,1} refers to "A2".
+     * The first item corresponds to the "Letter Coordinate": 0-26 -> A-Z
+     * The second item corresponds to the "Integer Coordinate": 0-(dimension-1) -> 1-dimension
+     * @param coordinates The integer coordinate of a figure's position
+     * @return The corresponding string representation of the position.
+     */
+    public static String toPosition(int[] coordinates) {;
         StringBuilder position = new StringBuilder();
-        position.append((char) (start + coordinates[1]));
+        position.append((char) (FoxHoundUI.ASC_A + coordinates[1]));
         position.append(coordinates[0] + 1);
         return position.toString();
     }
 
+    /**
+     * Determining whether a move is valid.
+     * @param dim Dimesnion of the board.
+     * @param players Positions of the players.
+     * @param figure The figure to move next.
+     * @param origin The start position of the move.
+     * @param destination The destination of the move.
+     * @throws IllegalArgumentException When the input coordinates is invalid,
+     * throws this error which means the coordinates cannot be read.
+     * @return A boolean indicating whether the move is valid.
+     */
     public static boolean isValidMove(int dim, String[] players, char figure,
                                       String origin, String destination) {
-        if (players == null)
+        if (players == null) {
             throw new NullPointerException();
+        }
         if (isValidInput(dim, players, figure, origin, destination)) {
             // Test whether destination is occupied
             if (!contains(destination, players)) {
@@ -115,8 +162,9 @@ public class FoxHoundUtils {
                         int[] destinationCoordinates = FoxHoundUI.parsePosition(destination);
                         return originCoordinates[0] - destinationCoordinates[0] == -1 &&
                                 Math.abs(originCoordinates[1] - destinationCoordinates[1]) == 1;
-                    } else
+                    } else {
                         return false;
+                    }
                 }
                 else {
                     // Check fox
@@ -132,13 +180,24 @@ public class FoxHoundUtils {
                     }
                 }
             }
-            else
+            else {
                 return false;
+            }
         }
-        else
+        else {
             throw new IllegalArgumentException();
+        }
     }
 
+    /**
+     * Whether the input is valid (No syntax errors)
+     * @param dim Dimesnion of the board.
+     * @param players Positions of the players.
+     * @param figure The figure to move next.
+     * @param origin The start position of the move.
+     * @param destination The destination of the move.
+     * @return Whether the input is valid or not.
+     */
     private static boolean isValidInput(int dim, String[] players, char figure,
                                         String origin, String destination) {
         /* Determine whether the input is valid or not from:
@@ -150,6 +209,12 @@ public class FoxHoundUtils {
                 (figure == 'F' || figure == 'H');
     }
 
+    /**
+     * Whether the position is valid (In range, not out of bounds)
+     * @param dim Dimension of the board
+     * @param position Position of the player
+     * @return Whether this position is valid or not.
+     */
     public static boolean isValidPosition(int dim, String position) {
         // Check input is in correct format
         try {
@@ -163,25 +228,45 @@ public class FoxHoundUtils {
         }
     }
 
+    /**
+     * Whether an array contains an element or not.
+     * @param element The element to be tested
+     * @param array Array to be teseted
+     * @return Whether the element is in the array or not.
+     */
     public static boolean contains(String element, String[] array) {
         for (String target: array) {
-            if (element.equals(target))
+            if (element.equals(target)) {
                 return true;
+            }
         }
         return false;
     }
 
+    /**
+     * Determine if the fox wins or not.
+     * @param foxPosition The position of the fox.
+     * @return Whether the fox wins or not.
+     */
     public static boolean isFoxWin(String foxPosition) {
         // Determine whether the fox reaches the other side
-        if (foxPosition == null)
+        if (foxPosition == null) {
             throw new NullPointerException();
+        }
         return FoxHoundUI.parsePosition(foxPosition)[0] == 0;
     }
 
+    /**
+     * Determine whether the hounds win or not.
+     * @param players Array of positions of players
+     * @param dim Dimension of the board
+     * @return Whether the houdns win or not.
+     */
     public static boolean isHoundWin(String[] players, int dim) {
         // Get fox's position and its possible moves
-        if (dim < MIN_DIM || dim > MAX_DIM)
+        if (dim < MIN_DIM || dim > MAX_DIM) {
             throw new IllegalArgumentException();
+        }
         int[] foxPosition = FoxHoundUI.parsePosition(players[players.length - 1]);
         int[][] possibleMoves = {{foxPosition[0] - 1, foxPosition[1] - 1},
                                  {foxPosition[0] - 1, foxPosition[1] + 1},
@@ -195,8 +280,9 @@ public class FoxHoundUtils {
         for (int i = 0; i < possibleMoves.length; i++) {
             if (isValidPosition(dim, toPosition(possibleMoves[i]))) {
                 for (int j = 0; j < players.length - 1; j++) {
-                    if (Arrays.equals(possibleMoves[i], FoxHoundUI.parsePosition(players[j])))
+                    if (Arrays.equals(possibleMoves[i], FoxHoundUI.parsePosition(players[j]))) {
                         blockedByHounds[i] = true;
+                    }
                 }
             }
             else {
@@ -204,8 +290,9 @@ public class FoxHoundUtils {
             }
         }
         for (boolean blocked: blockedByHounds) {
-            if (!blocked)
+            if (!blocked) {
                 return false;
+            }
         }
         return true;
     }

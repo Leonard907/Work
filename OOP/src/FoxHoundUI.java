@@ -13,7 +13,7 @@ import java.nio.file.Path;
 public class FoxHoundUI {
 
     /** Number of main menu entries. */
-    private static final int MENU_ENTRIES = 5;
+    private static final int MENU_ENTRIES = 5   ;
     /** Main menu display string. */
     private static final String MAIN_MENU =
         "\n1. Move\n2. AI Move\n3. Save\n4. Load\n5. Exit\n\nEnter 1 - 5:";
@@ -203,7 +203,7 @@ public class FoxHoundUI {
      */
     public static int[] parsePosition(String position) {
         try {
-            int column = position.charAt(0) - 65; // Coordinates in "ABCD..."
+            int column = position.charAt(0) - ASC_A; // Coordinates in "ABCD..."
             int row = Integer.parseInt(position.substring(1)) - 1;
             return new int[] {row, column};
         }

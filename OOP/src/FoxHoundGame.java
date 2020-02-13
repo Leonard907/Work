@@ -96,7 +96,7 @@ public class FoxHoundGame {
                                 "Estimated completing time: 2020.2.30");
                         break;
                     }
-                    boolean successMove = makeMove(players, dim);
+                    boolean successMove = FoxAI.makeMove(players, dim);
                     if (successMove) {
                         turn = FoxHoundUtils.HOUND_FIELD;
                     }
@@ -132,10 +132,11 @@ public class FoxHoundGame {
                         }
                         try {
                             boolean successful = FoxHoundIO.saveGame(players, turn, file);
-                            if (successful)
+                            if (successful) {
                                 saveSuccessful = true;
-                            else
+                            } else {
                                 System.out.println("ERROR: Saving file failed");
+                            }
                         }
                         catch (Exception ex) {
                             System.out.println("ERROR: Saving file failed.");
@@ -184,19 +185,29 @@ public class FoxHoundGame {
             System.out.println("Enter the dimension of board: ");
             try {
                 int dimension = Integer.parseInt(STDIN_SCAN.nextLine());
-                FoxHoundUtils.DIM = dimension;
+                FoxHoundUtils.setDim(dimension);
                 String[] players = FoxHoundUtils.initialisePositions(dimension);
                 gameLoop(dimension, players);
                 break;
             }
             catch (IllegalArgumentException e) {
-                System.out.println("Not in range [4-26]");
+                System.err.println("Not in range [4-26]");
                 System.out.println();
             }
         }
         // Close the scanner reading the standard input stream
         STDIN_SCAN.close();
     }
+
+}
+
+/**
+ * Utility class that generates a simple Fox AI. Players can call this in main menu.
+ *
+ * It contains a makeMove function that calculates the next move of the fox based
+ * on the board layout.
+ */
+class FoxAI {
     // Below is the Fox AI implementation
     /**
      * Make a move.
@@ -258,13 +269,13 @@ public class FoxHoundGame {
                 else
                     players[players.length - 1] = FoxHoundUtils.toPosition(possibleMoves[1]);
             } else if (FoxHoundUtils.isValidMove(dim, players, 'F',
-                    players[players.length - 1], FoxHoundUtils.toPosition(possibleMoves[0])))
+                    players[players.length - 1], FoxHoundUtils.toPosition(possibleMoves[0]))) {
                 players[players.length - 1] = FoxHoundUtils.toPosition(possibleMoves[0]);
-            else if (FoxHoundUtils.isValidMove(dim, players, 'F',
-                    players[players.length - 1], FoxHoundUtils.toPosition(possibleMoves[1])))
+            } else if (FoxHoundUtils.isValidMove(dim, players, 'F',
+                    players[players.length - 1], FoxHoundUtils.toPosition(possibleMoves[1]))) {
                 players[players.length - 1] = FoxHoundUtils.toPosition(possibleMoves[1]);
                 // No forward moves possible
-            else if (FoxHoundUtils.isValidMove(dim, players, 'F',
+            } else if (FoxHoundUtils.isValidMove(dim, players, 'F',
                     players[players.length - 1], FoxHoundUtils.toPosition(possibleMoves[2]))
                     && FoxHoundUtils.isValidMove(dim, players, 'F',
                     players[players.length - 1], FoxHoundUtils.toPosition(possibleMoves[3]))) {
@@ -274,12 +285,12 @@ public class FoxHoundGame {
                 else
                     players[players.length - 1] = FoxHoundUtils.toPosition(possibleMoves[3]);
             } else if (FoxHoundUtils.isValidMove(dim, players, 'F',
-                    players[players.length - 1], FoxHoundUtils.toPosition(possibleMoves[2])))
+                    players[players.length - 1], FoxHoundUtils.toPosition(possibleMoves[2]))) {
                 players[players.length - 1] = FoxHoundUtils.toPosition(possibleMoves[2]);
-            else if (FoxHoundUtils.isValidMove(dim, players, 'F',
-                    players[players.length - 1], FoxHoundUtils.toPosition(possibleMoves[3])))
+            } else if (FoxHoundUtils.isValidMove(dim, players, 'F',
+                    players[players.length - 1], FoxHoundUtils.toPosition(possibleMoves[3]))) {
                 players[players.length - 1] = FoxHoundUtils.toPosition(possibleMoves[3]);
-            else
+            } else
                 return false;
         }
         return true;
@@ -304,26 +315,29 @@ public class FoxHoundGame {
         }
         for (int i = 0; i < dim; i++) {
             for (int j = 0; j < dim; j++) {
-                if (!contains(i, filterLeft(playersCol, playersRow, fox)) && j < fox)
+                if (!contains(i, filterLeft(playersCol, playersRow, fox)) && j < fox) {
                     leftCount += 1;
-                if (!contains(i, filterRight(playersCol, playersRow, fox)) && j > fox)
+                } if (!contains(i, filterRight(playersCol, playersRow, fox)) && j > fox) {
                     rightCount += 1;
+                }
             }
         }
         // Calculate left & right difference
         for (int col: playersCol) {
-            if (col < fox)
+            if (col < fox) {
                 leftCount -= 5;
-            else if (col > fox)
+            } else if (col > fox) {
                 rightCount -= 5;
+            }
         }
         return new int[] {leftCount, rightCount};
     }
 
     private static boolean contains(int element, int[] array) {
         for (int target: array) {
-            if (element == target)
+            if (element == target) {
                 return true;
+            }
         }
         return false;
     }
@@ -331,8 +345,9 @@ public class FoxHoundGame {
     private static int[] filterLeft(int[] nums, int[] rows, int fox) {
         int count = 0;
         for (int num: nums) {
-            if (num < fox)
+            if (num < fox) {
                 count++;
+            }
         }
         int[] filter = new int[count];
         int index = 0;
@@ -348,8 +363,9 @@ public class FoxHoundGame {
     private static int[] filterRight(int[] nums, int[] rows, int fox) {
         int count = 0;
         for (int num: nums) {
-            if (num > fox)
+            if (num > fox) {
                 count++;
+            }
         }
         int[] filter = new int[count];
         int index = 0;
