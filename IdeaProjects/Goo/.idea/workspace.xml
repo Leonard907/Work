@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="98ca3530-f66b-4e79-9c5c-f78d56839c84" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="呼吁" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaFXApplication" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1WespoUdInzxlz3EX0l7EYCyxxz" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RunManager" selected="Application.Trial">
+    <configuration name="FoxHoundGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="FoxHoundGame" />
+      <module name="呼吁" />
+      <option name="PROGRAM_PARAMETERS" value="11" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HangMan" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="one.HangMan" />
+      <module name="呼吁" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="one.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SomethingElse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="SomethingElse" />
+      <module name="呼吁" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Trial" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="/Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="one.Trial" />
+      <module name="呼吁" />
+      <option name="PROGRAM_PARAMETERS" value="3 4 5 6 7" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="one.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FoxHoundUIBasicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="呼吁" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FoxHoundUIBasicTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FoxHoundUtilsBasicTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="呼吁" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="FoxHoundUtilsBasicTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SplitPathNameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="呼吁" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="week5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="week5" />
+      <option name="MAIN_CLASS_NAME" value="week5.SplitPathNameTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Trial" />
+      <item itemvalue="Application.HangMan" />
+      <item itemvalue="Application.FoxHoundGame" />
+      <item itemvalue="Application.SomethingElse" />
+      <item itemvalue="JUnit.SplitPathNameTest" />
+      <item itemvalue="JUnit.FoxHoundUtilsBasicTest" />
+      <item itemvalue="JUnit.FoxHoundUIBasicTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.FoxHoundUtilsBasicTest" />
+        <item itemvalue="Application.FoxHoundGame" />
+        <item itemvalue="JUnit.FoxHoundUIBasicTest" />
+        <item itemvalue="Application.SomethingElse" />
+        <item itemvalue="JUnit.SplitPathNameTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="98ca3530-f66b-4e79-9c5c-f78d56839c84" name="Default Changelist" comment="" />
+      <created>1562896930546</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1562896930546</updated>
+      <workItem from="1579036861413" duration="7719000" />
+      <workItem from="1579521581058" duration="27000" />
+      <workItem from="1579521618572" duration="6640000" />
+      <workItem from="1580156299549" duration="49000" />
+      <workItem from="1580156617152" duration="73972000" />
+      <workItem from="1580502431213" duration="12000" />
+      <workItem from="1580502469961" duration="510000" />
+      <workItem from="1580505627727" duration="127000" />
+      <workItem from="1580505759799" duration="18000" />
+      <workItem from="1580505790457" duration="103000" />
+      <workItem from="1580651111948" duration="60000" />
+      <workItem from="1580651175088" duration="3000" />
+      <workItem from="1581345048534" duration="19000" />
+      <workItem from="1582627036854" duration="46000" />
+      <workItem from="1582627396457" duration="58000" />
+      <workItem from="1583787462528" duration="16000" />
+      <workItem from="1583787484072" duration="24000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="320" y="109" key="#Customize_Threads_View" timestamp="1580205506275">
+      <screen x="0" y="23" width="1440" height="820" />
+    </state>
+    <state x="320" y="109" key="#Customize_Threads_View/0.23.1440.820@0.23.1440.820" timestamp="1580205506275" />
+    <state x="404" y="98" key="#FoxHoundGame" timestamp="1580156710906">
+      <screen x="0" y="23" width="1440" height="820" />
+    </state>
+    <state x="404" y="98" key="#FoxHoundGame/0.23.1440.820@0.23.1440.820" timestamp="1580156710906" />
+    <state x="168" y="151" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580505751699">
+      <screen x="0" y="23" width="1440" height="820" />
+    </state>
+    <state x="168" y="151" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.820@0.23.1440.820" timestamp="1580505751699" />
+    <state x="100" y="123" width="1240" height="620" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1580478006125">
+      <screen x="0" y="23" width="1440" height="820" />
+    </state>
+    <state x="100" y="123" width="1240" height="620" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.23.1440.820@0.23.1440.820" timestamp="1580478006125" />
+    <state x="441" y="279" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1580505746165">
+      <screen x="0" y="23" width="1440" height="820" />
+    </state>
+    <state x="441" y="279" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.820@0.23.1440.820" timestamp="1580505746165" />
+    <state x="301" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1580162823814">
+      <screen x="0" y="23" width="1440" height="820" />
+    </state>
+    <state x="301" y="23" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.23.1440.820@0.23.1440.820" timestamp="1580162823814" />
+    <state width="1398" height="211" key="GridCell.Tab.0.bottom" timestamp="1580502427019">
+      <screen x="0" y="23" width="1440" height="820" />
+    </state>
+    <state width="1398" height="211" key="GridCell.Tab.0.bottom/0.23.1440.820@0.23.1440.820" timestamp="1580502427019" />
+    <state width="1398" height="211" key="GridCell.Tab.0.center" timestamp="1580502427017">
+      <screen x="0" y="23" width="1440" height="820" />
+    </state>
+    <state width="1398" height="211" key="GridCell.Tab.0.center/0.23.1440.820@0.23.1440.820" timestamp="1580502427017" />
+    <state width="1398" height="211" key="GridCell.Tab.0.left" timestamp="1580502427016">
+      <screen x="0" y="23" width="1440" height="820" />
+    </state>
+    <state width="1398" height="211" key="GridCell.Tab.0.left/0.23.1440.820@0.23.1440.820" timestamp="1580502427016" />
+    <state width="1398" height="211" key="GridCell.Tab.0.right" timestamp="1580502427019">
+      <screen x="0" y="23" width="1440" height="820" />
+    </state>
+    <state width="1398" height="211" key="GridCell.Tab.0.right/0.23.1440.820@0.23.1440.820" timestamp="1580502427019" />
+    <state width="1398" height="105" key="GridCell.Tab.1.bottom" timestamp="1580502423752">
+      <screen x="0" y="23" width="1440" height="820" />
+    </state>
+    <state width="1398" height="105" key="GridCell.Tab.1.bottom/0.23.1440.820@0.23.1440.820" timestamp="1580502423752" />
+    <state width="1398" height="105" key="GridCell.Tab.1.center" timestamp="1580502423751">
+      <screen x="0" y="23" width="1440" height="820" />
+    </state>
+    <state width="1398" height="105" key="GridCell.Tab.1.center/0.23.1440.820@0.23.1440.820" timestamp="1580502423751" />
+    <state width="1398" height="105" key="GridCell.Tab.1.left" timestamp="1580502423751">
+      <screen x="0" y="23" width="1440" height="820" />
+    </state>
+    <state width="1398" height="105" key="GridCell.Tab.1.left/0.23.1440.820@0.23.1440.820" timestamp="1580502423751" />
+    <state width="1398" height="105" key="GridCell.Tab.1.right" timestamp="1580502423752">
+      <screen x="0" y="23" width="1440" height="820" />
+    </state>
+    <state width="1398" height="105" key="GridCell.Tab.1.right/0.23.1440.820@0.23.1440.820" timestamp="1580502423752" />
+    <state x="227" y="23" width="1024" height="820" key="SettingsEditor" timestamp="1583787506233">
+      <screen x="0" y="23" width="1440" height="820" />
+    </state>
+    <state x="227" y="23" width="1024" height="820" key="SettingsEditor/0.23.1440.820@0.23.1440.820" timestamp="1583787506233" />
+    <state x="399" y="265" key="com.intellij.ide.util.TipDialog" timestamp="1580505792232">
+      <screen x="0" y="23" width="1440" height="820" />
+    </state>
+    <state x="399" y="265" key="com.intellij.ide.util.TipDialog/0.23.1440.820@0.23.1440.820" timestamp="1580505792232" />
+    <state x="452" y="334" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1579192768675">
+      <screen x="0" y="23" width="1440" height="820" />
+    </state>
+    <state x="452" y="334" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.23.1440.820@0.23.1440.820" timestamp="1579192768675" />
+    <state x="385" y="167" width="670" height="676" key="search.everywhere.popup" timestamp="1582627070411">
+      <screen x="0" y="23" width="1440" height="820" />
+    </state>
+    <state x="385" y="167" width="670" height="676" key="search.everywhere.popup/0.23.1440.820@0.23.1440.820" timestamp="1582627070411" />
+    <state x="450" y="352" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1580228632415">
+      <screen x="0" y="23" width="1440" height="820" />
+    </state>
+    <state x="450" y="352" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.23.1440.820@0.23.1440.820" timestamp="1580228632415" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/week4/IsTriangularTest.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

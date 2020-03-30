@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="379271ba-6fa7-4755-b538-02079b33cad2" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1WerJNPP3dKsWteSFNHhLPUsx6l" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="/Library/Java/JavaVirtualMachines/jdk-11.0.5.jdk/Contents/Home" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <module name="IdeaProjects" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/呼吁/src/" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="379271ba-6fa7-4755-b538-02079b33cad2" name="Default Changelist" comment="" />
+      <created>1579520828182</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579520828182</updated>
+      <workItem from="1579520829387" duration="230000" />
+      <workItem from="1579521073802" duration="231000" />
+      <workItem from="1580651189296" duration="326000" />
+      <workItem from="1581248998118" duration="2155000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="184" y="94" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1580651229498">
+      <screen x="0" y="23" width="1440" height="820" />
+    </state>
+    <state x="184" y="94" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.820@0.23.1440.820" timestamp="1580651229498" />
+    <state x="457" y="223" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1580651227316">
+      <screen x="0" y="23" width="1440" height="820" />
+    </state>
+    <state x="457" y="223" key="#com.intellij.ide.util.TreeClassChooserDialog/0.23.1440.820@0.23.1440.820" timestamp="1580651227316" />
+    <state x="570" y="340" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1580651196646">
+      <screen x="0" y="23" width="1440" height="820" />
+    </state>
+    <state x="570" y="340" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1440.820@0.23.1440.820" timestamp="1580651196646" />
+    <state x="399" y="265" key="com.intellij.ide.util.TipDialog" timestamp="1579521073940">
+      <screen x="0" y="23" width="1440" height="820" />
+    </state>
+    <state x="399" y="265" key="com.intellij.ide.util.TipDialog/0.23.1440.820@0.23.1440.820" timestamp="1579521073940" />
+    <state x="114" y="55" key="new project wizard" timestamp="1579521302994">
+      <screen x="0" y="23" width="1440" height="820" />
+    </state>
+    <state x="114" y="55" key="new project wizard/0.23.1440.820@0.23.1440.820" timestamp="1579521302994" />
+  </component>
+</project>
