@@ -1,0 +1,17 @@
+#button {
+    -fx-background-color: aqua;
+    -fx-padding: 20 20 20 20;
+    -fx-font-family: Palatino;
+}
+
+#button:hover {
+    -fx-background-color: green;
+}
+
+#body {
+    -fx-fill: brown;
+}
+
+#food {
+    -fx-fill: LightSalmon;
+}
