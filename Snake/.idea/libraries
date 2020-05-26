@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="libraryTable">
+    <library name="algs4">
+      <CLASSES>
+        <root url="jar://$USER_HOME$/skeleton-sp19/library-sp19/javalib/algs4.jar!/" />
+        <root url="jar://$USER_HOME$/skeleton-sp19/library-sp19/javalib/jh61b.jar!/" />
+        <root url="jar://$USER_HOME$/skeleton-sp19/library-sp19/javalib/junit-4.12.jar!/" />
+      </CLASSES>
+      <JAVADOC />
+      <SOURCES>
+        <root url="jar://$USER_HOME$/skeleton-sp19/library-sp19/javalib/algs4.jar!/" />
+        <root url="jar://$USER_HOME$/skeleton-sp19/library-sp19/javalib/jh61b.jar!/" />
+      </SOURCES>
+    </library>
+  </component>
+</project>

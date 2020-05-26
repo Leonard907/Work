@@ -1,5 +1,3 @@
-package one.Snake;
-
 import java.awt.Point;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,7 +16,7 @@ public class SnakeBody {
     }
 
     private void initialise() {
-        for (int i = length; i > 0; i--) {
+        for (int i = 0; i < length; i++) {
             body.add(new Point(dimension / 2 + i, dimension / 2));
         }
     }
@@ -35,14 +33,14 @@ public class SnakeBody {
         else if (body.get(body.size() - 1).y < body.get(body.size() - 2).y)
             next = Snake.DOWN;
 
-        body.add(0, nextPoint(body.get(body.size() - 1), next));
+        body.add(nextPoint(body.get(body.size() - 1), next));
     }
 
     public void move() {
-        body.remove(0);
-        Point head = body.get(body.size() - 1);
+        body.remove(body.size() - 1);
+        Point head = body.get(0);
         Point newHead = nextPoint(head, next);
-        body.add(newHead);
+        body.add(0, newHead);
     }
 
     private Point nextPoint(Point head, String next) {
@@ -72,20 +70,24 @@ public class SnakeBody {
     }
 
     public boolean isLoss() {
-        Point start = body.get(body.size() - 1);
+        Point start = body.get(0);
         boolean outOfBounds =
                 start.x == 0 || start.y == 0 || start.x > dimension || start.y > dimension;
-        body.remove(body.size() - 1);
+        body.remove(0);
         boolean hitBody = body.contains(start);
-        body.add(start);
+        body.add(0, start);
         return outOfBounds || hitBody;
     }
 
     public boolean getFood(Point food) {
-        return body.get(body.size() - 1).equals(food);
+        return body.get(0).equals(food);
     }
 
     public void setNext(String next) {
         this.next = next;
+    }
+
+    public String getNext() {
+        return next;
     }
 }

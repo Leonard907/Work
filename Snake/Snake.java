@@ -1,5 +1,3 @@
-package one.Snake;
-
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Application;
@@ -55,7 +53,7 @@ public class Snake extends Application {
         snake = new SnakeBody(DEFAULT_DIMENSION, START_LENGTH, Snake.LEFT);
 
         Scene scene = new Scene(main, 500, 500);
-        scene.getStylesheets().add("one/Snake/SnakeStyle.css");
+        scene.getStylesheets().add("SnakeStyle.css");
 
         stage.setTitle("Snake");
         stage.setScene(scene);
@@ -116,20 +114,28 @@ public class Snake extends Application {
                     main.setOnKeyPressed(key -> {
                         switch (key.getCode()) {
                             case UP:
-                                snake.setNext(Snake.UP);
-                                moveJudge();
+                                if (!snake.getNext().equals(DOWN)) {
+                                    snake.setNext(Snake.UP);
+                                    moveJudge();
+                                }
                                 break;
                             case DOWN:
-                                snake.setNext(Snake.DOWN);
-                                moveJudge();
+                                if (!snake.getNext().equals(UP)) {
+                                    snake.setNext(Snake.DOWN);
+                                    moveJudge();
+                                }
                                 break;
                             case LEFT:
-                                snake.setNext(Snake.LEFT);
-                                moveJudge();
+                                if (!snake.getNext().equals(RIGHT)) {
+                                    snake.setNext(Snake.LEFT);
+                                    moveJudge();
+                                }
                                 break;
                             case RIGHT:
-                                snake.setNext(Snake.RIGHT);
-                                moveJudge();
+                                if (!snake.getNext().equals(LEFT)) {
+                                    snake.setNext(Snake.RIGHT);
+                                    moveJudge();
+                                }
                                 break;
                         }
                     });
@@ -164,8 +170,8 @@ public class Snake extends Application {
         addBorder();
         for (Point p: snake.getBody()) {
             Circle bodySegment = new Circle(
-                main.getWidth() / PROPORTION + (2 * p.x - 1) * radius,
-                main.getHeight() * (GAME_WINDOW_PROPORTION + 1) / PROPORTION - (2 * p.y - 1) * radius,
+                    main.getWidth() / PROPORTION + (2 * p.x - 1) * radius,
+                    main.getHeight() * (GAME_WINDOW_PROPORTION + 1) / PROPORTION - (2 * p.y - 1) * radius,
                     radius
             );
             bodySegment.setId("body");
