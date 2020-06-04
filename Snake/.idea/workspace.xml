@@ -18,10 +18,16 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
   </component>
   <component name="RunManager">
     <configuration name="Snake" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -61,7 +67,8 @@
       <updated>1590502582329</updated>
       <workItem from="1590502583662" duration="243000" />
       <workItem from="1590507610772" duration="1251000" />
-      <workItem from="1590508878215" duration="591000" />
+      <workItem from="1590508878215" duration="5574000" />
+      <workItem from="1591192677721" duration="12962000" />
     </task>
     <servers />
   </component>
@@ -69,26 +76,30 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1398" height="207" key="GridCell.Tab.0.bottom" timestamp="1590509472311">
+    <state x="533" y="145" key="#com.intellij.ide.util.MemberChooser" timestamp="1591202375134">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
-    <state width="1398" height="207" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1590509472311" />
-    <state width="1398" height="207" key="GridCell.Tab.0.center" timestamp="1590509472310">
+    <state x="533" y="145" key="#com.intellij.ide.util.MemberChooser/0.23.1440.811@0.23.1440.811" timestamp="1591202375134" />
+    <state width="1398" height="207" key="GridCell.Tab.0.bottom" timestamp="1591236112730">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
-    <state width="1398" height="207" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1590509472310" />
-    <state width="1398" height="207" key="GridCell.Tab.0.left" timestamp="1590509472310">
+    <state width="1398" height="207" key="GridCell.Tab.0.bottom/0.23.1440.811@0.23.1440.811" timestamp="1591236112730" />
+    <state width="1398" height="207" key="GridCell.Tab.0.center" timestamp="1591236112729">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
-    <state width="1398" height="207" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1590509472310" />
-    <state width="1398" height="207" key="GridCell.Tab.0.right" timestamp="1590509472311">
+    <state width="1398" height="207" key="GridCell.Tab.0.center/0.23.1440.811@0.23.1440.811" timestamp="1591236112729" />
+    <state width="1398" height="207" key="GridCell.Tab.0.left" timestamp="1591236112729">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
-    <state width="1398" height="207" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1590509472311" />
-    <state x="208" y="23" key="SettingsEditor" timestamp="1590508855231">
+    <state width="1398" height="207" key="GridCell.Tab.0.left/0.23.1440.811@0.23.1440.811" timestamp="1591236112729" />
+    <state width="1398" height="207" key="GridCell.Tab.0.right" timestamp="1591236112729">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
-    <state x="208" y="23" key="SettingsEditor/0.23.1440.811@0.23.1440.811" timestamp="1590508855231" />
+    <state width="1398" height="207" key="GridCell.Tab.0.right/0.23.1440.811@0.23.1440.811" timestamp="1591236112729" />
+    <state x="208" y="23" key="SettingsEditor" timestamp="1590542920421">
+      <screen x="0" y="23" width="1440" height="811" />
+    </state>
+    <state x="208" y="23" key="SettingsEditor/0.23.1440.811@0.23.1440.811" timestamp="1590542920421" />
     <state x="397" y="261" key="com.intellij.ide.util.TipDialog" timestamp="1590507611261">
       <screen x="0" y="23" width="1440" height="811" />
     </state>
@@ -97,16 +108,5 @@
       <screen x="0" y="23" width="1440" height="811" />
     </state>
     <state x="385" y="158" width="670" height="676" key="search.everywhere.popup/0.23.1440.811@0.23.1440.811" timestamp="1590507980009" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/SnakeBody.java</url>
-          <line>73</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

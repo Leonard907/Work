@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -28,7 +29,6 @@ public class Snake extends Application {
             // *2 for radius
             (double) GAME_WINDOW_PROPORTION / (DEFAULT_DIMENSION * PROPORTION * 2);
     private static final int START_LENGTH = 3;
-    private static final long SPEED = 500;
     private static final Button startNewGame = new Button("Start a new game");
     private static final int FRAME_RATE = 100;
     public static final String LEFT = "left";
@@ -43,6 +43,8 @@ public class Snake extends Application {
     private SnakeBody snake;
     private Point food;
     private Timeline mainLoop;
+    private boolean paused;
+    private boolean gameStart;
 
     public static void main(String[] args) {
         launch(args);
@@ -54,14 +56,14 @@ public class Snake extends Application {
 
         Scene scene = new Scene(main, 500, 500);
         scene.getStylesheets().add("SnakeStyle.css");
-
         stage.setTitle("Snake");
         stage.setScene(scene);
         stage.show();
-
         interfaceSetup();
+
         startNewGame.setOnAction(e -> {
             score = 0;
+            gameStart = true;
             food = null;
             snake = new SnakeBody(DEFAULT_DIMENSION, START_LENGTH, Snake.LEFT);
             setNewTimeline();
@@ -81,13 +83,22 @@ public class Snake extends Application {
         main.getChildren().clear();
         gamePane.getChildren().clear();
 
+        // start game
+        if (!gameStart) {
+            Text start = new Text(main.getWidth() / 4, main.getHeight() / 5,
+                    "Press the button to start!");
+            start.setFont(Font.font(
+                    "Palatino", FontPosture.REGULAR, 20
+            ));
+            gamePane.getChildren().add(start);
+        }
         addBorder();
 
         // Game status
         HBox gameButtons = new HBox(15);
         setButtonStyle(startNewGame);
 
-        gameButtons.getChildren().addAll(startNewGame);
+        gameButtons.getChildren().add(startNewGame);
         gameButtons.setAlignment(Pos.CENTER);
 
         // Score
@@ -111,41 +122,15 @@ public class Snake extends Application {
     private void setNewTimeline() {
         mainLoop = new Timeline(new KeyFrame(Duration.millis(FRAME_RATE),
                 e -> {
-                    main.setOnKeyPressed(key -> {
-                        switch (key.getCode()) {
-                            case UP:
-                                if (!snake.getNext().equals(DOWN)) {
-                                    snake.setNext(Snake.UP);
-                                    moveJudge();
-                                }
-                                break;
-                            case DOWN:
-                                if (!snake.getNext().equals(UP)) {
-                                    snake.setNext(Snake.DOWN);
-                                    moveJudge();
-                                }
-                                break;
-                            case LEFT:
-                                if (!snake.getNext().equals(RIGHT)) {
-                                    snake.setNext(Snake.LEFT);
-                                    moveJudge();
-                                }
-                                break;
-                            case RIGHT:
-                                if (!snake.getNext().equals(LEFT)) {
-                                    snake.setNext(Snake.RIGHT);
-                                    moveJudge();
-                                }
-                                break;
-                        }
-                    });
+                    main.setOnKeyPressed(this::handle);
                     main.requestFocus();
                     interfaceSetup();
                     drawSnake();
                     drawFood();
                     moveJudge();
-                    if (snake.isLoss())
+                    if (snake.isLoss()) {
                         mainLoop.stop();
+                    }
                 }));
         mainLoop.setCycleCount(Timeline.INDEFINITE);
     }
@@ -177,6 +162,33 @@ public class Snake extends Application {
             bodySegment.setId("body");
             gamePane.getChildren().add(bodySegment);
         }
+        Circle eye1, eye2;
+        if (snake.getNext().equals(Snake.RIGHT) || snake.getNext().equals(Snake.LEFT)) {
+            eye1 = new Circle(
+                    main.getWidth() / PROPORTION + (2 * snake.getBody().get(0).x - 1) * radius,
+                    main.getHeight() * (GAME_WINDOW_PROPORTION + 1) / PROPORTION - (2 * snake.getBody().get(0).y - 0.5) * radius,
+                    0.3 * radius
+            );
+            eye2 = new Circle(
+                    main.getWidth() / PROPORTION + (2 * snake.getBody().get(0).x - 1) * radius,
+                    main.getHeight() * (GAME_WINDOW_PROPORTION + 1) / PROPORTION - (2 * snake.getBody().get(0).y - 1.5) * radius,
+                    0.3 * radius
+            );
+        } else {
+            eye1 = new Circle(
+                    main.getWidth() / PROPORTION + (2 * snake.getBody().get(0).x - 0.5) * radius,
+                    main.getHeight() * (GAME_WINDOW_PROPORTION + 1) / PROPORTION - (2 * snake.getBody().get(0).y - 1) * radius,
+                    0.3 * radius
+            );
+            eye2 = new Circle(
+                    main.getWidth() / PROPORTION + (2 * snake.getBody().get(0).x - 1.5) * radius,
+                    main.getHeight() * (GAME_WINDOW_PROPORTION + 1) / PROPORTION - (2 * snake.getBody().get(0).y - 1) * radius,
+                    0.3 * radius
+            );
+        }
+        eye1.setId("eye");
+        eye2.setId("eye");
+        gamePane.getChildren().addAll(eye1, eye2);
     }
 
     /**
@@ -226,5 +238,38 @@ public class Snake extends Application {
     private void setButtonStyle(Button... buttons) {
         for (Button b: buttons)
             b.setId("button");
+    }
+
+    private void handle(KeyEvent key) {
+        switch (key.getCode()) {
+            case UP:
+                if (!snake.getNext().equals(DOWN)) {
+                    snake.setNext(Snake.UP);
+                    snake.returnToPreviousState();
+                    moveJudge();
+                }
+                break;
+            case DOWN:
+                if (!snake.getNext().equals(UP)) {
+                    snake.setNext(Snake.DOWN);
+                    snake.returnToPreviousState();
+                    moveJudge();
+                }
+                break;
+            case LEFT:
+                if (!snake.getNext().equals(RIGHT)) {
+                    snake.setNext(Snake.LEFT);
+                    snake.returnToPreviousState();
+                    moveJudge();
+                }
+                break;
+            case RIGHT:
+                if (!snake.getNext().equals(LEFT)) {
+                    snake.setNext(Snake.RIGHT);
+                    snake.returnToPreviousState();
+                    moveJudge();
+                }
+                break;
+        }
     }
 }

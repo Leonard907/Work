@@ -22,7 +22,6 @@ public class SnakeBody {
     }
 
     public void acquireFood() {
-        length++;
         String next = "";
         if (body.get(body.size() - 1).x > body.get(body.size() - 2).x)
             next = Snake.RIGHT;
@@ -41,6 +40,21 @@ public class SnakeBody {
         Point head = body.get(0);
         Point newHead = nextPoint(head, next);
         body.add(0, newHead);
+    }
+
+    public void returnToPreviousState() {
+        acquireFood();
+        body.remove(0);
+    }
+
+    public boolean isLoss() {
+        Point start = body.get(0);
+        boolean outOfBounds =
+                start.x < 0 || start.y < 0 || start.x > (dimension + 1) || start.y > (dimension + 1);
+        body.remove(0);
+        boolean hitBody = body.contains(start);
+        body.add(0, start);
+        return outOfBounds || hitBody;
     }
 
     private Point nextPoint(Point head, String next) {
@@ -67,16 +81,6 @@ public class SnakeBody {
 
     public List<Point> getBody() {
         return body;
-    }
-
-    public boolean isLoss() {
-        Point start = body.get(0);
-        boolean outOfBounds =
-                start.x == 0 || start.y == 0 || start.x > dimension || start.y > dimension;
-        body.remove(0);
-        boolean hitBody = body.contains(start);
-        body.add(0, start);
-        return outOfBounds || hitBody;
     }
 
     public boolean getFood(Point food) {
