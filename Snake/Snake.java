@@ -30,6 +30,7 @@ public class Snake extends Application {
             (double) GAME_WINDOW_PROPORTION / (DEFAULT_DIMENSION * PROPORTION * 2);
     private static final int START_LENGTH = 3;
     private static final Button startNewGame = new Button("Start a new game");
+    private static final Button resumeGame = new Button("Resume");
     private static final int FRAME_RATE = 100;
     public static final String LEFT = "left";
     public static final String RIGHT = "right";
@@ -42,8 +43,7 @@ public class Snake extends Application {
     private int score;
     private SnakeBody snake;
     private Point food;
-    private Timeline mainLoop;
-    private boolean paused;
+    private Timeline snakeAnimation;
     private boolean gameStart;
 
     public static void main(String[] args) {
@@ -51,30 +51,34 @@ public class Snake extends Application {
     }
 
     @Override
-    public void start(Stage stage) {
-        snake = new SnakeBody(DEFAULT_DIMENSION, START_LENGTH, Snake.LEFT);
-
+    public void start(Stage primaryStage) {
         Scene scene = new Scene(main, 500, 500);
         scene.getStylesheets().add("SnakeStyle.css");
-        stage.setTitle("Snake");
-        stage.setScene(scene);
-        stage.show();
+        primaryStage.setTitle("Snake");
+        primaryStage.setScene(scene);
+        primaryStage.setResizable(false);
+        primaryStage.show();
         interfaceSetup();
 
         startNewGame.setOnAction(e -> {
-            score = 0;
-            gameStart = true;
-            food = null;
-            snake = new SnakeBody(DEFAULT_DIMENSION, START_LENGTH, Snake.LEFT);
-            setNewTimeline();
-            mainLoop.play();
+            mainLoop();
         });
 
-        main.widthProperty().addListener(ov -> interfaceSetup());
-        main.heightProperty().addListener(ov -> interfaceSetup());
+        resumeGame.setOnAction(e -> {
+            snakeAnimation.play();
+        });
     }
 
     /* ------------------- UI Methods -------------------- */
+
+    private void mainLoop() {
+        score = 0;
+        gameStart = true;
+        food = null;
+        snake = new SnakeBody(DEFAULT_DIMENSION, START_LENGTH, Snake.LEFT);
+        setNewTimeline();
+        snakeAnimation.play();
+    }
 
     /**
      * Setup the interface
@@ -97,8 +101,9 @@ public class Snake extends Application {
         // Game status
         HBox gameButtons = new HBox(15);
         setButtonStyle(startNewGame);
+        setButtonStyle(resumeGame);
 
-        gameButtons.getChildren().add(startNewGame);
+        gameButtons.getChildren().addAll(startNewGame, resumeGame);
         gameButtons.setAlignment(Pos.CENTER);
 
         // Score
@@ -120,7 +125,7 @@ public class Snake extends Application {
      * Set a new animation. With key events detected
      */
     private void setNewTimeline() {
-        mainLoop = new Timeline(new KeyFrame(Duration.millis(FRAME_RATE),
+        snakeAnimation = new Timeline(new KeyFrame(Duration.millis(FRAME_RATE),
                 e -> {
                     main.setOnKeyPressed(this::handle);
                     main.requestFocus();
@@ -129,10 +134,10 @@ public class Snake extends Application {
                     drawFood();
                     moveJudge();
                     if (snake.isLoss()) {
-                        mainLoop.stop();
+                        snakeAnimation.stop();
                     }
                 }));
-        mainLoop.setCycleCount(Timeline.INDEFINITE);
+        snakeAnimation.setCycleCount(Timeline.INDEFINITE);
     }
 
     /**
@@ -269,6 +274,10 @@ public class Snake extends Application {
                     snake.returnToPreviousState();
                     moveJudge();
                 }
+                break;
+            case P:
+                snake.returnToPreviousState();
+                snakeAnimation.stop();
                 break;
         }
     }
