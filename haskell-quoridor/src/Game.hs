@@ -33,7 +33,11 @@ validStepAction (Game b ps) s = (canMove (currentPlayer ps) ps s) && (validStep 
 
 -- A jump action is valid if the step interval has a player
 validJumpAction :: Game -> Step -> Bool 
-validJumpAction (Game b ps) s = ableToJump ps s
+validJumpAction (Game b ps) s = ableToJump (currentPlayer ps) ps s
+
+-- A diagonal action is valid if the destination is not occupied. 
+validDiagonalAction :: Game -> Step -> Bool 
+validDiagonalAction (Game b ps) s = ableToDiagonal (currentPlayer ps) ps s
 
 -- Generate all valid steps at a game state.
 validSteps :: Game -> [Action]
@@ -58,9 +62,15 @@ validWalls g = map Place (filter (validWallAction g) walls)
     where 
         walls = concat [[wallRight c, wallTop c] | c<-[(i, j) | i<-allColumns, j<-allRows]]
 
+-- Generate all valid diagonals at a game state.
+validDiagonals :: Game -> [Action]
+validDiagonals g@(Game b ps) = map Move (filter (validDiagonalAction g) steps)
+    where  
+        steps = let p = currentPlayer ps in makeSteps (currentCell p) (adjacentDiagonals p) 
+
 -- Generate all valid actions at a game state.
 validActions :: Game -> [Action]
-validActions g = (validSteps g) ++ (validWalls g) ++ (validJumps g)
+validActions g = (validSteps g) ++ (validWalls g) ++ (validJumps g) ++ (validDiagonals g)
 
 -- Key function. Given a game and an action, checks the validity of the action and applies it to the
 -- game, generating a new game.
@@ -69,6 +79,8 @@ performAction g@(Game b (p:ps)) (Move s)
     | validStepAction g s = 
         Just (Game b (rotatePlayers ((movePlayer (nextTurn p) s):ps)))
     | validJumpAction g s = 
+        Just (Game b (rotatePlayers ((movePlayer (nextTurn p) s):ps)))
+    | validDiagonalAction g s = 
         Just (Game b (rotatePlayers ((movePlayer (nextTurn p) s):ps)))
     | otherwise = Nothing
 performAction g@(Game b (p:ps)) (Place w)

@@ -11,9 +11,9 @@
   size: 2286
   modtime: 1611155678
 /Users/leonard/Work/haskell-quoridor/src/Game.hs:
-  hash: 23d0d9bbb1cd300bcb83685f1552683118440e826b30c3d10e4cb9ddb7045c3b
-  size: 2733
-  modtime: 1613499209
+  hash: 3bebab29332a33b1fb914442298f53e41b35faff6a0204eb2ab2efa808e84066
+  size: 3335
+  modtime: 1613501339
 /Users/leonard/Work/haskell-quoridor/src/Cell.hs:
   hash: 853b8c02b5bb490edfac23ff03595f0a5817583397cb07ee982dba215afe4830
   size: 2828
@@ -39,9 +39,9 @@
   size: 1748
   modtime: 1613372485
 /Users/leonard/Work/haskell-quoridor/src/Player.hs:
-  hash: 3b350b5bcf13b702ee4b79da3871c0fc6414c51d44414d73e696c9fa850f6361
-  size: 2586
-  modtime: 1613499631
+  hash: e989b72da5a64f343bf6d625eb40967a37d82344e8c37b54db12450fee3a0138
+  size: 3323
+  modtime: 1613501102
 /Users/leonard/Work/haskell-quoridor/haskell-quoridor.cabal:
   hash: 02f320e55ae0854a530708cd3613cab5331dfbdd8b9338f9fb64aa3abb812a3d
   size: 1557

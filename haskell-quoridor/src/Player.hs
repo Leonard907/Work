@@ -41,6 +41,15 @@ adjacentJumps p = [(c,r+n) | n<-[-2,2], r+n >= firstRow, r+n <= lastRow] ++
         c = fst (currentCell p)
         r = snd (currentCell p)
 
+-- Given a player, return the possible diagonal moves
+adjacentDiagonals :: Player -> [Cell]
+adjacentDiagonals p = [(chr (ord c + i),r+j) | 
+                        (i,j)<-[(-1,1),(-1,-1),(1,-1),(1,1)], 
+                        r+i >= firstRow, r+i <= lastRow, ord c + j >= ord firstColumn, ord c + j <= ord lastColumn]
+    where 
+        c = fst (currentCell p)
+        r = snd (currentCell p)
+
 {-
     Useful checks.
 -}
@@ -66,8 +75,12 @@ middleCell ((c,r), (c',r'))
     | otherwise = Nothing
 
 -- Given a list of players and a step, return whether a jump is possible
-ableToJump :: [Player] -> Step -> Bool 
-ableToJump ps step = (middleCell step /= Nothing) && (not (cellFree ps (fromJust (middleCell step))))
+ableToJump :: Player -> [Player] -> Step -> Bool 
+ableToJump p ps step = (currentCell p == fst step) && (middleCell step /= Nothing) && (not (cellFree ps (fromJust (middleCell step)))) && (cellFree ps (snd step))
+
+-- Given a list of players and a step, return whether a diagonal is possible
+ableToDiagonal :: Player -> [Player] -> Step -> Bool 
+ableToDiagonal p ps ((c,r) ,(c',r')) = (currentCell p == (c,r)) && (cellFree ps (c',r')) && abs (ord c - ord c') == 1 && abs (r - r') == 1
 
 {-
     Updating the player.
