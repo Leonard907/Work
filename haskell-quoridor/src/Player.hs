@@ -1,10 +1,11 @@
 {-
     Module: Player.
-
     A few utility functions to obtain and update player data.
 -}
 module Player where 
 
+import Data.Char
+import Data.Maybe
 import Types
 import Constants
 import Cell
@@ -32,6 +33,14 @@ cellFree (p:ps) c = (currentCell p /= c) && cellFree ps c
 adjacentCells :: Player -> [Cell]
 adjacentCells p = cellsAroundInBoard (currentCell p)
 
+-- Given a player, return the possible jump locations
+adjacentJumps :: Player -> [Cell]
+adjacentJumps p = [(c,r+n) | n<-[-2,2], r+n >= firstRow, r+n <= lastRow] ++ 
+                  [(chr (ord c + n),r) | n<-[-2,2], ord c + n >= ord firstColumn, ord c + n <= ord lastColumn]
+    where 
+        c = fst (currentCell p)
+        r = snd (currentCell p)
+
 {-
     Useful checks.
 -}
@@ -48,6 +57,17 @@ hasWallsLeft p = remainingWalls p > 0
 canMove :: Player -> [Player] -> Step -> Bool 
 canMove p ps (cs, ce) = 
     (currentCell p == cs) && (cellFree ps ce) && (isAdjacent cs ce)
+
+-- Return the middle cell from a step
+middleCell :: Step -> Maybe Cell 
+middleCell ((c,r), (c',r')) 
+    | c == c' && abs (r - r') == 2 = Just (c, div (r+r') 2)
+    | r == r' && abs (ord c - ord c') == 2 = Just (chr $ div (ord c + ord c') 2, r)
+    | otherwise = Nothing
+
+-- Given a list of players and a step, return whether a jump is possible
+ableToJump :: [Player] -> Step -> Bool 
+ableToJump ps step = (middleCell step /= Nothing) && (not (cellFree ps (fromJust (middleCell step))))
 
 {-
     Updating the player.

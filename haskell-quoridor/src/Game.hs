@@ -1,6 +1,5 @@
 {-
     Module: Game.
-
     Functions used in the game loop to change the game state.
 -}
 module Game where
@@ -32,11 +31,22 @@ rotatePlayers (p:ps) = ps ++ [p]
 validStepAction :: Game -> Step -> Bool
 validStepAction (Game b ps) s = (canMove (currentPlayer ps) ps s) && (validStep b s)
 
+-- A jump action is valid if the step interval has a player
+validJumpAction :: Game -> Step -> Bool 
+validJumpAction (Game b ps) s = ableToJump ps s
+
 -- Generate all valid steps at a game state.
 validSteps :: Game -> [Action]
 validSteps g@(Game b ps) = map Move (filter (validStepAction g) steps)
     where  
         steps = let p = currentPlayer ps in makeSteps (currentCell p) (adjacentCells p)
+
+-- Generate all valid jumps at a game state
+validJumps :: Game -> [Action]
+validJumps g@(Game b ps) = map Move (filter (validJumpAction g) steps)
+    where  
+        steps = let p = currentPlayer ps in makeSteps (currentCell p) (adjacentJumps p)
+
 
 -- A wall action is valid if the wall is valid and player has walls remaining.
 validWallAction :: Game -> Wall -> Bool 
@@ -50,16 +60,18 @@ validWalls g = map Place (filter (validWallAction g) walls)
 
 -- Generate all valid actions at a game state.
 validActions :: Game -> [Action]
-validActions g = (validSteps g) ++ (validWalls g)
+validActions g = (validSteps g) ++ (validWalls g) ++ (validJumps g)
 
 -- Key function. Given a game and an action, checks the validity of the action and applies it to the
 -- game, generating a new game.
 performAction :: Game -> Action -> Maybe Game
 performAction g@(Game b (p:ps)) (Move s)
-    | validStepAction g s = 
+    | validStepAction g s = 
+        Just (Game b (rotatePlayers ((movePlayer (nextTurn p) s):ps)))
+    | validJumpAction g s = 
         Just (Game b (rotatePlayers ((movePlayer (nextTurn p) s):ps)))
     | otherwise = Nothing
 performAction g@(Game b (p:ps)) (Place w)
-    | validWallAction g w = 
+    | validWallAction g w = 
         Just (Game (placeWall b w) (rotatePlayers ((useWall (nextTurn p)):ps)))
     | otherwise = Nothing

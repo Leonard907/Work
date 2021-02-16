@@ -48,15 +48,32 @@ startingBoard = b
 -- Takes two player 'constructors' (e.g. makeHumanPlayer, makeMinimaxPlayer, ...) and returns a list
 -- of two players named "X" and "Y" that start from the middle column in the top and the bottom row
 -- respectively.
-startingPlayersMiddle :: (String -> Cell -> Int -> [Cell] -> Player) -> 
+startingPlayersTwo :: (String -> Cell -> Int -> [Cell] -> Player) -> 
                          (String -> Cell -> Int -> [Cell] -> Player) -> [Player]
-startingPlayersMiddle ctr1 ctr2 = 
+startingPlayersTwo ctr1 ctr2 = 
     [ctr1 "X" (middleColumn, firstRow) wallsPerPlayer winningX, 
      ctr2 "Y" (middleColumn, lastRow) wallsPerPlayer winningY]
     where 
         middleColumn = intToColumn ((div boardSize 2) + 1)
         winningX = [(i, lastRow) | i<-allColumns]
         winningY = [(i, firstRow) | i<-allColumns]
+
+startingPlayersFour :: (String -> Cell -> Int -> [Cell] -> Player) -> 
+                        (String -> Cell -> Int -> [Cell] -> Player) -> 
+                        (String -> Cell -> Int -> [Cell] -> Player) -> 
+                        (String -> Cell -> Int -> [Cell] -> Player) -> [Player]
+startingPlayersFour ctr1 ctr2 ctr3 ctr4 = 
+    [ctr1 "X" (middleColumn, firstRow) wallsPerPlayer winningX, 
+     ctr2 "Y" (middleColumn, lastRow) wallsPerPlayer winningY,
+     ctr3 "Z" (firstColumn, middleRow) wallsPerPlayer winningZ, 
+     ctr4 "W" (lastColumn, middleRow) wallsPerPlayer winningW]
+    where 
+        middleColumn = intToColumn ((div boardSize 2) + 1)
+        middleRow = (div boardSize 2) + 1
+        winningX = [(i, lastRow) | i<-allColumns]
+        winningY = [(i, firstRow) | i<-allColumns]
+        winningZ = [(lastColumn, i) | i<-allRows]
+        winningW = [(firstColumn, i) | i<-allRows]
 
 -- Translates a string to the corresponding player constructor, useful for initialisation.
 nameToPlayerConstructor :: String -> Maybe (String -> Cell -> Int -> [Cell] -> Player)
@@ -110,6 +127,10 @@ main = do {
     playerX<-getLine;
     putStrLn "What kind of player is player Y? (Human/Dumb/Minimax/Reed)";
     playerY<-getLine; 
-    case (nameToPlayerConstructor playerX, nameToPlayerConstructor playerY) of 
-        (Just ctrX, Just ctrY) -> do { play (Game startingBoard (startingPlayersMiddle ctrX ctrY)) }
+    putStrLn "What kind of player is player Z? (Human/Dumb/Minimax/Reed)";
+    playerZ<-getLine;
+    putStrLn "What kind of player is player W? (Human/Dumb/Minimax/Reed)";
+    playerW<-getLine; 
+    case (nameToPlayerConstructor playerX, nameToPlayerConstructor playerY, nameToPlayerConstructor playerZ, nameToPlayerConstructor playerW) of 
+        (Just ctrX, Just ctrY, Just ctrZ, Just ctrW) -> do { play (Game startingBoard (startingPlayersFour ctrX ctrY ctrZ ctrW)) }
         _ -> do { putStrLn "Unrecognised player type. Try again."; main } }
