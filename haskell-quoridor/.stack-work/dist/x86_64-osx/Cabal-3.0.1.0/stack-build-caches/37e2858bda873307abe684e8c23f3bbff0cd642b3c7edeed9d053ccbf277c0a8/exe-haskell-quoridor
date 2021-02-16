@@ -1,0 +1,60 @@
+/Users/leonard/Downloads/haskell-quoridor/src/Players/Reed.hs:
+  hash: c0dd4052c2045e025dbc0840ea72a72995e3005ffe63cd6fd1a0f233a17758ab
+  size: 1748
+  modtime: 1613372485
+/Users/leonard/Downloads/haskell-quoridor/src/Players/Human.hs:
+  hash: 06b986dc99e442d4fab2a132bf27873f228cef237575450ee84564a00b76faab
+  size: 1277
+  modtime: 1611322398
+/Users/leonard/Downloads/haskell-quoridor/src/Players/Minimax.hs:
+  hash: 1e1094f24cd146395fd851471e20b41a6ff5cff0ad95fbd0170cf443a3340624
+  size: 10022
+  modtime: 1613408995
+/Users/leonard/Downloads/haskell-quoridor/src/Constants.hs:
+  hash: e2b82aa2d8865db977bf33d0a69599c4b19f80c6d027b4d1559632f256c796ea
+  size: 1334
+  modtime: 1613365901
+/Users/leonard/Downloads/haskell-quoridor/src/Types.hs:
+  hash: dd3ff3fed54088765dd5fd164d96fc8b9d65f187c62aded0dbf0d57fc0d32d63
+  size: 2770
+  modtime: 1611322398
+/Users/leonard/Downloads/haskell-quoridor/src/Main.hs:
+  hash: eab2a359bb5a65465ae2a4a8e2d9ca248d2d623b11580e867bf3826b1bdff902
+  size: 4270
+  modtime: 1611322398
+/Users/leonard/Downloads/haskell-quoridor/src/Print.hs:
+  hash: d01b7734320f5f626e05be68566c69722b01e3322b589539ea7815796e34e381
+  size: 2389
+  modtime: 1611322162
+/Users/leonard/Downloads/haskell-quoridor/src/Players/Dumb.hs:
+  hash: 565409dfeb7ca9040dba5a95f7c9a77aa963c4ae43d8070ccea559999b60a32f
+  size: 1026
+  modtime: 1611322398
+/Users/leonard/Downloads/haskell-quoridor/src/Board.hs:
+  hash: 07bb054a727d49858803ca17c3c93fc65b680198b1f155e8f075f0808f593839
+  size: 2142
+  modtime: 1611154667
+/Users/leonard/Downloads/haskell-quoridor/README.md:
+  hash: 065891b9a0facf86030ba6805b4ca58b449eecb786de90c38f9f303dc5aefbad
+  size: 467
+  modtime: 1611159482
+/Users/leonard/Downloads/haskell-quoridor/src/Action.hs:
+  hash: 3187d7e76caf3e134e17d4da8241aeaa4e001d72c8e35da5c1a16ae09dac6761
+  size: 2286
+  modtime: 1611155678
+/Users/leonard/Downloads/haskell-quoridor/src/Game.hs:
+  hash: 6310b81be26bf9cdbf64061b6ba4bb4a738f26f80b3680d4efe1e57812635846
+  size: 2221
+  modtime: 1611156290
+/Users/leonard/Downloads/haskell-quoridor/src/Cell.hs:
+  hash: 853b8c02b5bb490edfac23ff03595f0a5817583397cb07ee982dba215afe4830
+  size: 2828
+  modtime: 1610365359
+/Users/leonard/Downloads/haskell-quoridor/src/Player.hs:
+  hash: 24b9f998d2246b2d8408a1e9bf9474ab27c9c2d9d94a716e843f1581c23a69df
+  size: 1713
+  modtime: 1611322398
+/Users/leonard/Downloads/haskell-quoridor/haskell-quoridor.cabal:
+  hash: 02f320e55ae0854a530708cd3613cab5331dfbdd8b9338f9fb64aa3abb812a3d
+  size: 1557
+  modtime: 1611153916

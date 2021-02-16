@@ -1,0 +1,40 @@
+*** PART III (10 pt) ***
+
+Is it a good idea to start the game with the Reed opening?
+
+Answer here.
+
+Test: Run the game with X using reed opening and both with minimax strategy
+Here is the game process:
+X:c3h Y:e8 X:f3h Y:e7 X:e2 Y:e6 X:e3 Y:e5 X:e4 Y:a1v X:d4 Y:e4 X:d5 Y:e3 X:d6 Y:e2 X:d7 Y:e1
+By adopting this strategy X loses, so it might not be a good decision under my minimax implementation. 
+
+Discussion:
+We focus on the game after X moves to e4. The board layout is as below:
+  a9-- b9-- c9-- d9-- e9-- f9-- g9-- h9-- i9 
+  |    |    |    |    |    |    |    |    |  
+  |    |    |    |    |    |    |    |    |  
+  a8-- b8-- c8-- d8-- e8-- f8-- g8-- h8-- i8 
+  |    |    |    |    |    |    |    |    |  
+  |    |    |    |    |    |    |    |    |  
+  a7-- b7-- c7-- d7-- e7-- f7-- g7-- h7-- i7 
+  |    |    |    |    |    |    |    |    |  
+  |    |    |    |    |    |    |    |    |  
+  a6-- b6-- c6-- d6-- e6-- f6-- g6-- h6-- i6 
+  |    |    |    |    |    |    |    |    |  
+  |    |    |    |    |    |    |    |    |  
+  a5-- b5-- c5-- d5-- Y -- f5-- g5-- h5-- i5 
+  |    |    |    |    |    |    |    |    |  
+  |    |    |    |    |    |    |    |    |  
+  a4-- b4-- c4-- d4-- X -- f4-- g4-- h4-- i4 
+  |    |              |              |    |  
+  |    |              |              |    |  
+  a3-- b3-- c3-- d3-- e3-- f3-- g3-- h3-- i3 
+  |    |    |    |    |    |    |    |    |  
+  |    |    |    |    |    |    |    |    |  
+  a2-- b2-- c2-- d2-- e2-- f2-- g2-- h2-- i2 
+  |    |    |    |    |    |    |    |    |  
+  |    |    |    |    |    |    |    |    |  
+  a1-- b1-- c1-- d1-- e1-- f1-- g1-- h1-- i1 
+In this case X,Y reach a stalemate as they blocked the way for them to go through middle. Now X,Y will both be reluctant to give away their position as the one who takes it is has a straight path to the goal, therefore placing walls might be the thing to do next for both players.
+As X is 2 walls shorter than Y, X will run out of walls sooner than Y and hence will move earlier. This means Y will eventually take the blocked position and have a greater winning chance.
