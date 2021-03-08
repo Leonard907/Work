@@ -48,7 +48,7 @@ testTree2 = StateTree
         , (Move (('f', 1), ('g', 2)), StateTree 8 [])
         ]
     ts2 =
-        [ (Move (('d', 1), ('e', 2)), StateTree 3 [])
+        [ (Move (('d', 1), ('e', 2)), StateTree 9 [])
         , (Move (('e', 1), ('f', 2)), StateTree 4 [])
         , (Move (('f', 1), ('g', 2)), StateTree 6 [])
         ]

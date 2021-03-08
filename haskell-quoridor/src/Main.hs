@@ -58,6 +58,9 @@ startingPlayersTwo ctr1 ctr2 =
         winningX = [(i, lastRow) | i<-allColumns]
         winningY = [(i, firstRow) | i<-allColumns]
 
+-- Takes four player 'constructors' (e.g. makeHumanPlayer, makeMinimaxPlayer, ...) and returns a list
+-- of four players named "X" ,"Y", "Z" and "W" that start from the middle column in the top, the bottom row, 
+-- the middle row on the left, the right column respectively.
 startingPlayersFour :: (String -> Cell -> Int -> [Cell] -> Player) -> 
                         (String -> Cell -> Int -> [Cell] -> Player) -> 
                         (String -> Cell -> Int -> [Cell] -> Player) -> 
@@ -127,10 +130,10 @@ main = do {
     playerX<-getLine;
     putStrLn "What kind of player is player Y? (Human/Dumb/Minimax/Reed)";
     playerY<-getLine; 
-    putStrLn "What kind of player is player Z? (Human/Dumb/Minimax/Reed)";
-    playerZ<-getLine;
-    putStrLn "What kind of player is player W? (Human/Dumb/Minimax/Reed)";
-    playerW<-getLine; 
-    case (nameToPlayerConstructor playerX, nameToPlayerConstructor playerY, nameToPlayerConstructor playerZ, nameToPlayerConstructor playerW) of 
-        (Just ctrX, Just ctrY, Just ctrZ, Just ctrW) -> do { play (Game startingBoard (startingPlayersFour ctrX ctrY ctrZ ctrW)) }
+    -- putStrLn "What kind of player is player Z? (Human/Dumb/Minimax/Reed)";
+    -- playerZ<-getLine;
+    -- putStrLn "What kind of player is player W? (Human/Dumb/Minimax/Reed)";
+    -- playerW<-getLine; 
+    case (nameToPlayerConstructor playerX, nameToPlayerConstructor playerY {-, nameToPlayerConstructor playerZ, nameToPlayerConstructor playerW -}) of 
+        (Just ctrX, Just ctrY {-, Just ctrZ, Just ctrW -}) -> do { play (Game startingBoard (startingPlayersTwo ctrX ctrY {-ctrZ ctrW-})) }
         _ -> do { putStrLn "Unrecognised player type. Try again."; main } }
