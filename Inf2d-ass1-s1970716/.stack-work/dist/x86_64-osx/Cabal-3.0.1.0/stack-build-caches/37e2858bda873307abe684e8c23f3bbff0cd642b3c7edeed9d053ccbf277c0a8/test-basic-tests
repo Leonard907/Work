@@ -1,0 +1,36 @@
+/Users/leonard/Work/haskell-quoridor/tests/Basic/BoardTest.hs:
+  hash: 62af7d28186aa94e3ad6748c82033c6ea6214500cc0c32f6e750e6f55b7b4fc4
+  size: 9348
+  modtime: 1611322159
+/Users/leonard/Work/haskell-quoridor/tests/Basic/GameTest.hs:
+  hash: a0c33a329bff07200579bbdff81c5fbae8363b674a82d1707afcebe22dbc48c0
+  size: 5504
+  modtime: 1611322398
+/Users/leonard/Work/haskell-quoridor/tests/Basic/CellTest.hs:
+  hash: 437362b047243540ccfdd2d09ba908c7836f948f2346bbc78b6ece8dc5345928
+  size: 7418
+  modtime: 1610463106
+/Users/leonard/Work/haskell-quoridor/tests/Basic/ActionTest.hs:
+  hash: ca0addcc81d9a025b508856e30d12a13ce9cc09d9995de9f71cdde5d7d9acd9f
+  size: 2996
+  modtime: 1610464091
+/Users/leonard/Work/haskell-quoridor/tests/Basic/PlayerTest.hs:
+  hash: 7cf0f26c0245345a0e8dca7ceb394f3097366bf30daa1184ac6ddfb92bc4a5d4
+  size: 6548
+  modtime: 1611322398
+/Users/leonard/Work/haskell-quoridor/tests/Basic/Main.hs:
+  hash: 9b7f1e5ac0b329e8566e82dcf5e2eb8a8c785f127b9ae550d5a7d767f7319574
+  size: 539
+  modtime: 1611154269
+/Users/leonard/Work/haskell-quoridor/tests/Basic/HumanTest.hs:
+  hash: cb31284fd802cc7c5d21499b46f466674a6842c17e3d6c40fc8c5274e65f8275
+  size: 3183
+  modtime: 1611322398
+/Users/leonard/Work/haskell-quoridor/haskell-quoridor.cabal:
+  hash: 02f320e55ae0854a530708cd3613cab5331dfbdd8b9338f9fb64aa3abb812a3d
+  size: 1557
+  modtime: 1611153916
+/Users/leonard/Work/haskell-quoridor/README.md:
+  hash: 065891b9a0facf86030ba6805b4ca58b449eecb786de90c38f9f303dc5aefbad
+  size: 467
+  modtime: 1611159482

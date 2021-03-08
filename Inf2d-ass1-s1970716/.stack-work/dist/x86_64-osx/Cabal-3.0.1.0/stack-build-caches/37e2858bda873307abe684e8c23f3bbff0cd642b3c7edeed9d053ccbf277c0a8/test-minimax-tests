@@ -1,0 +1,52 @@
+/Users/leonard/Work/haskell-quoridor/tests/Minimax/Main.hs:
+  hash: 73e7c766f79316ef1d84007e3c907e1fabbebfdc78f39e781213a1f6c4d4f923
+  size: 989
+  modtime: 1615217248
+/Users/leonard/Work/haskell-quoridor/tests/Minimax/MinimaxPrimitive.hs:
+  hash: 19a017f4431493854f12bf18679300efe95a7879119e99b4fdc47ac234230347
+  size: 2099
+  modtime: 1614705346
+/Users/leonard/Work/haskell-quoridor/tests/Minimax/Util/Assertion.hs:
+  hash: fef78c47188a972a55b1477eb8bfb6c8f70f221791bf30aa5d67cbc2624fda50
+  size: 475
+  modtime: 1610391354
+/Users/leonard/Work/haskell-quoridor/tests/Minimax/PruneDepthTest.hs:
+  hash: de46dfcdab257ef29c6713ed2f14cec51d69851600e638c8ff1bbbf941d3fc8c
+  size: 2886
+  modtime: 1611154370
+/Users/leonard/Work/haskell-quoridor/tests/Minimax/GenerateGameTreeTest.hs:
+  hash: efb5b267c991fce6814e1d203e737a51c346e52351a68f3163607fa6b318373d
+  size: 3179
+  modtime: 1611322398
+/Users/leonard/Work/haskell-quoridor/tests/Minimax/Util/StateTreeInstances.hs:
+  hash: d575f2f4c1fcf02ae33502c2060f6ab889fdc5deb385aefed300ebc21ac64226
+  size: 908
+  modtime: 1610391335
+/Users/leonard/Work/haskell-quoridor/tests/Minimax/AlphaBetaTest.hs:
+  hash: e757f85aa9abf4bdb25d5bf03ba9711112c3bcbf72760ce9a75c7f7015822aea
+  size: 2072
+  modtime: 1613375730
+/Users/leonard/Work/haskell-quoridor/tests/Minimax/PruneBreadthTest.hs:
+  hash: 941cdf1e330782a1f6222783e113336a252440897ec17e015c768113a9726dde
+  size: 3045
+  modtime: 1611154365
+/Users/leonard/Work/haskell-quoridor/tests/Minimax/UtilityTest.hs:
+  hash: 04654bb0cd902d8c2607f3c1ef241dae87fb063b1b503583ad96fb0b3bfb5ec1
+  size: 3496
+  modtime: 1613196424
+/Users/leonard/Work/haskell-quoridor/tests/Minimax/OrderingTreeTest.hs:
+  hash: b156e62201bf90bf04d945180639ccf987ff62875cfba9105e03aeb90b08d7a8
+  size: 3414
+  modtime: 1611154361
+/Users/leonard/Work/haskell-quoridor/haskell-quoridor.cabal:
+  hash: 02f320e55ae0854a530708cd3613cab5331dfbdd8b9338f9fb64aa3abb812a3d
+  size: 1557
+  modtime: 1611153916
+/Users/leonard/Work/haskell-quoridor/tests/Minimax/Util/GameInstances.hs:
+  hash: 54ea6372719645c27407b24b2f6392d0fc2f9c5011005a120dd25c9f5f3435f8
+  size: 555
+  modtime: 1611322398
+/Users/leonard/Work/haskell-quoridor/README.md:
+  hash: 065891b9a0facf86030ba6805b4ca58b449eecb786de90c38f9f303dc5aefbad
+  size: 467
+  modtime: 1611159482

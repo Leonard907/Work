@@ -1,0 +1,43 @@
+*** PART III (10 pt) ***
+
+Is it a good idea to start the game with the Reed opening?
+
+Answer here.
+
+Test: Run the game with Y using reed opening and both with minimax strategy
+The game result is shown in the file "ReedTest.txt"
+By adopting this strategy X wins, so it might not be a good decision under my minimax implementation. 
+
+Discussion:
+In the simulation X moves to the right at step 2. This is reasonable considering Y is on the same vertical line as X, hence at this point 
+the shortest path to the winning position will require X to move right one step (not left because of the wall). However, Here we will 
+consider only the case where X moves forward instead of moving to right. In this case, after Y does the reed opening, the board will look like this:
+a9-- b9-- c9-- d9-- Y -- f9-- g9-- h9-- i9 
+|    |    |    |    |    |    |    |    |  
+|    |    |    |    |    |    |    |    |  
+a8-- b8-- c8-- d8-- e8-- f8-- g8-- h8-- i8 
+|    |    |    |    |    |    |    |    |  
+|    |    |    |    |    |    |    |    |  
+a7-- b7-- c7-- d7-- e7-- f7-- g7-- h7-- i7 
+|    |    |    |    |    |    |    |    |  
+|    |    |    |    |    |    |    |    |  
+a6-- b6-- c6-- d6-- e6-- f6-- g6-- h6-- i6 
+|    |    |    |    |    |    |    |    |  
+|    |    |    |    |    |    |    |    |  
+a5-- b5-- c5-- d5-- e5-- f5-- g5-- h5-- i5 
+|    |    |    |    |    |    |    |    |  
+|    |    |    |    |    |    |    |    |  
+a4-- b4-- c4-- d4-- e4-- f4-- g4-- h4-- i4 
+|    |              |              |    |  
+|    |              |              |    |  
+a3-- b3-- c3-- d3-- X-- f3-- g3-- h3-- i3 
+|    |    |    |    |    |    |    |    |  
+|    |    |    |    |    |    |    |    |  
+a2-- b2-- c2-- d2-- e2-- f2 -- g2-- h2-- i2 
+|    |    |    |    |    |    |    |    |  
+|    |    |    |    |    |    |    |    |  
+a1-- b1-- c1-- d1-- e1-- f1-- g1-- h1-- i1 
+Now X moves first. The obvious choice to take is to move forward, since left and right have walls that block the forward path if chosen 
+to move left or right. Now the opening looks meaningless as X has moved past the walls and is unlikely to return to positions behind the 
+walls. This also gives X an advantage of moving two more steps than Y, since now X has reached row 3 and Y is still at the starting position. 
+In conclusion, reed opening might not be a good choice as it is not useful in practice and even put you in a bad position. 
