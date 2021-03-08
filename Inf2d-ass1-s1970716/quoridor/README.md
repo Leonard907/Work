@@ -22,7 +22,5 @@ Notice that in this case the wall action is invalid if the selected square is in
 When the game finishes, an interface would pop up showing who wins and a button to restart the game. It looks like this:
 ![](src/Win.png)
 
-### Notes
-There is no No. of walls restriction set which means players can place any wall they like. 
 
 Hope you enjoy it!
