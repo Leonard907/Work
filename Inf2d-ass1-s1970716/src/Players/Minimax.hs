@@ -245,7 +245,7 @@ breadth = 10
 -- Function that combines all the different parts implemented in Part I.
 minimax :: Game -> Action
 minimax =
-    minimaxABFromTree -- or 'minimaxABFromTree'
+    minimaxFromTree -- or 'minimaxABFromTree'
         . pruneBreadth breadth
         . highFirst
         . evalTree

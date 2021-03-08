@@ -133,10 +133,10 @@
 #endif /* MIN_TOOL_VERSION_runghc */
 
 #ifndef CURRENT_PACKAGE_KEY
-#define CURRENT_PACKAGE_KEY "haskell-quoridor-1.0-GMOwdaIcssJGzDpCWkMeGr"
+#define CURRENT_PACKAGE_KEY "haskell-quoridor-1.0-D4u9mCQdYYCL8cczJwjVpX"
 #endif /* CURRENT_PACKAGE_KEY */
 #ifndef CURRENT_COMPONENT_ID
-#define CURRENT_COMPONENT_ID "haskell-quoridor-1.0-GMOwdaIcssJGzDpCWkMeGr"
+#define CURRENT_COMPONENT_ID "haskell-quoridor-1.0-D4u9mCQdYYCL8cczJwjVpX"
 #endif /* CURRENT_COMPONENT_ID */
 #ifndef CURRENT_PACKAGE_VERSION
 #define CURRENT_PACKAGE_VERSION "1.0"

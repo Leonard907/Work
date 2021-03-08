@@ -3,6 +3,7 @@ const SQUARE_CLASS = 'square'
 const X_POS = 4
 const Y_POS = 76
 const BOARD_SIZE = 9
+const MAX_WALLS = 10
 
 const cellElements = document.querySelectorAll('[data-cell]')
 const winningMessageElement = document.getElementById('winningMessage')
@@ -11,6 +12,8 @@ const winningMessageTextElement = document.querySelector('[data-winning-message-
 let circleTurn
 let current_X
 let current_Y
+let walls_X = 0
+let walls_Y = 0
 
 
 startGame()
@@ -71,21 +74,35 @@ function handleClick(e) {
     } else if (document.getElementById('wall_V').checked) {
         if (moveIndex % BOARD_SIZE != 8 && moveIndex > 8) {
             if (cellElements[moveIndex].style.borderRightColor != 'red' && cellElements[moveIndex - 9].style.borderRightColor != 'red') {
-                cellElements[moveIndex].style.borderRightColor = 'red'
-                cellElements[moveIndex - 9].style.borderRightColor = 'red'
-                cellElements[moveIndex + 1].style.borderLeftColor = 'red'
-                cellElements[moveIndex - 8].style.borderLeftColor = 'red'
-                circleTurn = !circleTurn
+                if ((circleTurn && walls_X < MAX_WALLS) || (!circleTurn && walls_Y < MAX_WALLS)) {
+                    cellElements[moveIndex].style.borderRightColor = 'red'
+                    cellElements[moveIndex - 9].style.borderRightColor = 'red'
+                    cellElements[moveIndex + 1].style.borderLeftColor = 'red'
+                    cellElements[moveIndex - 8].style.borderLeftColor = 'red'
+                    if (circleTurn) {
+                        walls_X++
+                    } else {
+                        walls_Y++
+                    }
+                    circleTurn = !circleTurn
+                }
             }
         }
     } else if (document.getElementById('wall_H').checked) {
         if (moveIndex % BOARD_SIZE != 8 && moveIndex > 8) {
             if (cellElements[moveIndex].style.borderTopColor != 'red' && cellElements[moveIndex + 1].style.borderRightColor != 'red') {
-                cellElements[moveIndex].style.borderTopColor = 'red'
-                cellElements[moveIndex + 1].style.borderTopColor = 'red'
-                cellElements[moveIndex - 9].style.borderBottomColor = 'red'
-                cellElements[moveIndex - 8].style.borderBottomColor = 'red'
-                circleTurn = !circleTurn
+                if ((circleTurn && walls_X < MAX_WALLS) || (!circleTurn && walls_Y < MAX_WALLS)) {
+                    cellElements[moveIndex].style.borderTopColor = 'red'
+                    cellElements[moveIndex + 1].style.borderTopColor = 'red'
+                    cellElements[moveIndex - 9].style.borderBottomColor = 'red'
+                    cellElements[moveIndex - 8].style.borderBottomColor = 'red'
+                    if (circleTurn) {
+                        walls_X++
+                    } else {
+                        walls_Y++
+                    }
+                    circleTurn = !circleTurn
+                }
             }
         }
     }

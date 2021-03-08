@@ -29,12 +29,12 @@ version :: Version
 version = Version [1,0] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
-bindir     = "/Users/leonard/Work/haskell-quoridor/.stack-work/install/x86_64-osx/37e2858bda873307abe684e8c23f3bbff0cd642b3c7edeed9d053ccbf277c0a8/8.8.4/bin"
-libdir     = "/Users/leonard/Work/haskell-quoridor/.stack-work/install/x86_64-osx/37e2858bda873307abe684e8c23f3bbff0cd642b3c7edeed9d053ccbf277c0a8/8.8.4/lib/x86_64-osx-ghc-8.8.4/haskell-quoridor-1.0-Js2YeorM9Ki4AoiPP0hVff-haskell-quoridor"
-dynlibdir  = "/Users/leonard/Work/haskell-quoridor/.stack-work/install/x86_64-osx/37e2858bda873307abe684e8c23f3bbff0cd642b3c7edeed9d053ccbf277c0a8/8.8.4/lib/x86_64-osx-ghc-8.8.4"
-datadir    = "/Users/leonard/Work/haskell-quoridor/.stack-work/install/x86_64-osx/37e2858bda873307abe684e8c23f3bbff0cd642b3c7edeed9d053ccbf277c0a8/8.8.4/share/x86_64-osx-ghc-8.8.4/haskell-quoridor-1.0"
-libexecdir = "/Users/leonard/Work/haskell-quoridor/.stack-work/install/x86_64-osx/37e2858bda873307abe684e8c23f3bbff0cd642b3c7edeed9d053ccbf277c0a8/8.8.4/libexec/x86_64-osx-ghc-8.8.4/haskell-quoridor-1.0"
-sysconfdir = "/Users/leonard/Work/haskell-quoridor/.stack-work/install/x86_64-osx/37e2858bda873307abe684e8c23f3bbff0cd642b3c7edeed9d053ccbf277c0a8/8.8.4/etc"
+bindir     = "/Users/leonard/Work/Inf2d-ass1-s1970716/.stack-work/install/x86_64-osx/37e2858bda873307abe684e8c23f3bbff0cd642b3c7edeed9d053ccbf277c0a8/8.8.4/bin"
+libdir     = "/Users/leonard/Work/Inf2d-ass1-s1970716/.stack-work/install/x86_64-osx/37e2858bda873307abe684e8c23f3bbff0cd642b3c7edeed9d053ccbf277c0a8/8.8.4/lib/x86_64-osx-ghc-8.8.4/haskell-quoridor-1.0-Js2YeorM9Ki4AoiPP0hVff-haskell-quoridor"
+dynlibdir  = "/Users/leonard/Work/Inf2d-ass1-s1970716/.stack-work/install/x86_64-osx/37e2858bda873307abe684e8c23f3bbff0cd642b3c7edeed9d053ccbf277c0a8/8.8.4/lib/x86_64-osx-ghc-8.8.4"
+datadir    = "/Users/leonard/Work/Inf2d-ass1-s1970716/.stack-work/install/x86_64-osx/37e2858bda873307abe684e8c23f3bbff0cd642b3c7edeed9d053ccbf277c0a8/8.8.4/share/x86_64-osx-ghc-8.8.4/haskell-quoridor-1.0"
+libexecdir = "/Users/leonard/Work/Inf2d-ass1-s1970716/.stack-work/install/x86_64-osx/37e2858bda873307abe684e8c23f3bbff0cd642b3c7edeed9d053ccbf277c0a8/8.8.4/libexec/x86_64-osx-ghc-8.8.4/haskell-quoridor-1.0"
+sysconfdir = "/Users/leonard/Work/Inf2d-ass1-s1970716/.stack-work/install/x86_64-osx/37e2858bda873307abe684e8c23f3bbff0cd642b3c7edeed9d053ccbf277c0a8/8.8.4/etc"
 
 getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: IO FilePath
 getBinDir = catchIO (getEnv "haskell_quoridor_bindir") (\_ -> return bindir)

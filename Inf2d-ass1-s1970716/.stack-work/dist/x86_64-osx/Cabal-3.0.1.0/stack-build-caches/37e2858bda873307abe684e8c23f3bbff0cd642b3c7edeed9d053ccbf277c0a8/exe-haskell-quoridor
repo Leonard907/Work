@@ -1,60 +1,60 @@
-/Users/leonard/Work/haskell-quoridor/src/Players/Dumb.hs:
-  hash: 565409dfeb7ca9040dba5a95f7c9a77aa963c4ae43d8070ccea559999b60a32f
-  size: 1026
-  modtime: 1611322398
-/Users/leonard/Work/haskell-quoridor/src/Print.hs:
-  hash: d01b7734320f5f626e05be68566c69722b01e3322b589539ea7815796e34e381
-  size: 2389
-  modtime: 1611322162
-/Users/leonard/Work/haskell-quoridor/src/Action.hs:
-  hash: 3187d7e76caf3e134e17d4da8241aeaa4e001d72c8e35da5c1a16ae09dac6761
-  size: 2286
-  modtime: 1611155678
-/Users/leonard/Work/haskell-quoridor/src/Game.hs:
-  hash: 3bebab29332a33b1fb914442298f53e41b35faff6a0204eb2ab2efa808e84066
-  size: 3335
-  modtime: 1613501339
-/Users/leonard/Work/haskell-quoridor/src/Cell.hs:
-  hash: 853b8c02b5bb490edfac23ff03595f0a5817583397cb07ee982dba215afe4830
-  size: 2828
-  modtime: 1610365359
-/Users/leonard/Work/haskell-quoridor/src/Main.hs:
-  hash: 5cd327ce3e85ddbb1166cf1cdd21936edba1d2bc02a7ce700a60c56261e1ceb5
-  size: 5766
-  modtime: 1615192831
-/Users/leonard/Work/haskell-quoridor/src/Types.hs:
-  hash: dd3ff3fed54088765dd5fd164d96fc8b9d65f187c62aded0dbf0d57fc0d32d63
-  size: 2770
-  modtime: 1611322398
-/Users/leonard/Work/haskell-quoridor/src/Constants.hs:
-  hash: e2b82aa2d8865db977bf33d0a69599c4b19f80c6d027b4d1559632f256c796ea
-  size: 1334
-  modtime: 1613365901
-/Users/leonard/Work/haskell-quoridor/src/Board.hs:
-  hash: 07bb054a727d49858803ca17c3c93fc65b680198b1f155e8f075f0808f593839
-  size: 2142
-  modtime: 1611154667
-/Users/leonard/Work/haskell-quoridor/src/Players/Reed.hs:
-  hash: c0dd4052c2045e025dbc0840ea72a72995e3005ffe63cd6fd1a0f233a17758ab
-  size: 1748
-  modtime: 1613372485
-/Users/leonard/Work/haskell-quoridor/src/Player.hs:
-  hash: e989b72da5a64f343bf6d625eb40967a37d82344e8c37b54db12450fee3a0138
-  size: 3323
-  modtime: 1613501102
-/Users/leonard/Work/haskell-quoridor/haskell-quoridor.cabal:
-  hash: 02f320e55ae0854a530708cd3613cab5331dfbdd8b9338f9fb64aa3abb812a3d
-  size: 1557
-  modtime: 1611153916
-/Users/leonard/Work/haskell-quoridor/src/Players/Minimax.hs:
-  hash: 1e1094f24cd146395fd851471e20b41a6ff5cff0ad95fbd0170cf443a3340624
-  size: 10022
-  modtime: 1613408995
-/Users/leonard/Work/haskell-quoridor/src/Players/Human.hs:
-  hash: 06b986dc99e442d4fab2a132bf27873f228cef237575450ee84564a00b76faab
-  size: 1277
-  modtime: 1611322398
-/Users/leonard/Work/haskell-quoridor/README.md:
+/Users/leonard/Work/Inf2d-ass1-s1970716/README.md:
   hash: 065891b9a0facf86030ba6805b4ca58b449eecb786de90c38f9f303dc5aefbad
   size: 467
   modtime: 1611159482
+/Users/leonard/Work/Inf2d-ass1-s1970716/src/Constants.hs:
+  hash: e2b82aa2d8865db977bf33d0a69599c4b19f80c6d027b4d1559632f256c796ea
+  size: 1334
+  modtime: 1613365901
+/Users/leonard/Work/Inf2d-ass1-s1970716/src/Players/Human.hs:
+  hash: 06b986dc99e442d4fab2a132bf27873f228cef237575450ee84564a00b76faab
+  size: 1277
+  modtime: 1611322398
+/Users/leonard/Work/Inf2d-ass1-s1970716/src/Players/Minimax.hs:
+  hash: d3c94146fe0380ad4c0ab5f8e16a140801bca4b71eb3daef04729795b1a31df0
+  size: 10020
+  modtime: 1615222498
+/Users/leonard/Work/Inf2d-ass1-s1970716/haskell-quoridor.cabal:
+  hash: 02f320e55ae0854a530708cd3613cab5331dfbdd8b9338f9fb64aa3abb812a3d
+  size: 1557
+  modtime: 1611153916
+/Users/leonard/Work/Inf2d-ass1-s1970716/src/Main.hs:
+  hash: ba84cbe6cbcc4077d451cf400cdff511fc22bd881bf941a55192eded3c32fb89
+  size: 5837
+  modtime: 1615213173
+/Users/leonard/Work/Inf2d-ass1-s1970716/src/Players/Dumb.hs:
+  hash: 565409dfeb7ca9040dba5a95f7c9a77aa963c4ae43d8070ccea559999b60a32f
+  size: 1026
+  modtime: 1611322398
+/Users/leonard/Work/Inf2d-ass1-s1970716/src/Board.hs:
+  hash: 07bb054a727d49858803ca17c3c93fc65b680198b1f155e8f075f0808f593839
+  size: 2142
+  modtime: 1611154667
+/Users/leonard/Work/Inf2d-ass1-s1970716/src/Types.hs:
+  hash: dd3ff3fed54088765dd5fd164d96fc8b9d65f187c62aded0dbf0d57fc0d32d63
+  size: 2770
+  modtime: 1611322398
+/Users/leonard/Work/Inf2d-ass1-s1970716/src/Player.hs:
+  hash: 92f2d242bf8e666e39ef7d2079b1326d451c8fb8df041720c9a18a57dc504214
+  size: 3405
+  modtime: 1615213229
+/Users/leonard/Work/Inf2d-ass1-s1970716/src/Cell.hs:
+  hash: 853b8c02b5bb490edfac23ff03595f0a5817583397cb07ee982dba215afe4830
+  size: 2828
+  modtime: 1610365359
+/Users/leonard/Work/Inf2d-ass1-s1970716/src/Game.hs:
+  hash: 3d8352e4680941239b62d6c57f5b7987932aec3860ff4d883107ef407d9b1d68
+  size: 3696
+  modtime: 1615213535
+/Users/leonard/Work/Inf2d-ass1-s1970716/src/Action.hs:
+  hash: 3187d7e76caf3e134e17d4da8241aeaa4e001d72c8e35da5c1a16ae09dac6761
+  size: 2286
+  modtime: 1611155678
+/Users/leonard/Work/Inf2d-ass1-s1970716/src/Players/Reed.hs:
+  hash: c0dd4052c2045e025dbc0840ea72a72995e3005ffe63cd6fd1a0f233a17758ab
+  size: 1748
+  modtime: 1613372485
+/Users/leonard/Work/Inf2d-ass1-s1970716/src/Print.hs:
+  hash: d01b7734320f5f626e05be68566c69722b01e3322b589539ea7815796e34e381
+  size: 2389
+  modtime: 1611322162
