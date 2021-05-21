@@ -1,0 +1,3 @@
+this is
+my plain text
+i will not encrypt it

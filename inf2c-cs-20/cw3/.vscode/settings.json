@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "array": "c",
+        "*.tcc": "c",
+        "functional": "c",
+        "tuple": "c"
+    }
+}

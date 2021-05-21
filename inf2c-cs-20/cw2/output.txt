@@ -1,0 +1,246 @@
+Cache size: 0, Mem path: memfile-complex.txt, Reg path: regfile.txt
+ ~~~ Loaded Memory   :
+00100000000000010000000001000000
+00100000000000100000000001101000
+00100000000000110000110000000000
+00100000000001000000000000001010
+00100000000001010000000000000000
+00010000101001000000000000001010
+10001100001001100000000000000000
+10001100010001110000000000000000
+00000000110001110100000000100000
+10101100011010000000000000000000
+10001100011010000000000000000000
+00100000101001010000000000000001
+00100000001000010000000000000100
+00100000010000100000000000000100
+00100000011000110000000000000100
+00001000000000000000000000000101
+11111100000000000000000000000000
+00000000000000000000000000000001
+00100000000000100000100000000000
+00100000000000100000100000000000
+00100000000000100000100000000000
+00100000000000100000100000000000
+00100000000000100000100000000000
+00100000000000100000100000000000
+00100000000000100000100000000000
+00100000000000100000100000000000
+00100000000000100000100000000000
+00000000000000000000000000000010
+00100000000000100000100000000000
+00100000000000100000100000000000
+00100000000000100000100000000000
+00100000000000100000100000000000
+00100000000000100000100000000000
+00100000000000100000100000000000
+00100000000000100000100000000000
+00100000000000100000100000000000
+00100000000000100000100000000000
+ ~~~ Loaded Registers: (print starts from $1)
+00000000000000000000000000000001
+00000000000000000000000000000010
+11111111111111111111111111111100
+PC 0: Executing ADDI(8), $1 = $0 + 64 
+Reg $1 = 64 
+PC 1: Executing ADDI(8), $2 = $0 + 104 
+Reg $2 = 104 
+PC 2: Executing ADDI(8), $3 = $0 + 3072 
+Reg $3 = 3072 
+PC 3: Executing ADDI(8), $4 = $0 + 10 
+Reg $4 = 10 
+PC 4: Executing ADDI(8), $5 = $0 + 0 
+Reg $5 = 0 
+PC 5: Executing BEQ(4), $4 = $5 ? branch a length of 11 instructions 
+PC 6: Executing LW(35), $6 = M[$1 + 0] 
+Reg $6 = -67108864 
+PC 7: Executing LW(35), $7 = M[$2 + 0] 
+Reg $7 = 537004032 
+PC 8: Executing ADD(0), $8 = $6 + $7 (function: 32) 
+Reg $8 = 469895168 
+PC 9: Executing SW(43), M[$3 + 0] = $8 
+PC 10: Executing LW(35), $8 = M[$3 + 0] 
+Reg $8 = 469895168 
+PC 11: Executing ADDI(8), $5 = $5 + 1 
+Reg $5 = 1 
+PC 12: Executing ADDI(8), $1 = $1 + 4 
+Reg $1 = 68 
+PC 13: Executing ADDI(8), $2 = $2 + 4 
+Reg $2 = 108 
+PC 14: Executing ADDI(8), $3 = $3 + 4 
+Reg $3 = 3076 
+PC 15: Executing J(2), Jump to instruction 5 
+PC 5: Executing BEQ(4), $4 = $5 ? branch a length of 11 instructions 
+PC 6: Executing LW(35), $6 = M[$1 + 0] 
+Reg $6 = 1 
+PC 7: Executing LW(35), $7 = M[$2 + 0] 
+Reg $7 = 2 
+PC 8: Executing ADD(0), $8 = $6 + $7 (function: 32) 
+Reg $8 = 3 
+PC 9: Executing SW(43), M[$3 + 0] = $8 
+PC 10: Executing LW(35), $8 = M[$3 + 0] 
+Reg $8 = 3 
+PC 11: Executing ADDI(8), $5 = $5 + 1 
+Reg $5 = 2 
+PC 12: Executing ADDI(8), $1 = $1 + 4 
+Reg $1 = 72 
+PC 13: Executing ADDI(8), $2 = $2 + 4 
+Reg $2 = 112 
+PC 14: Executing ADDI(8), $3 = $3 + 4 
+Reg $3 = 3080 
+PC 15: Executing J(2), Jump to instruction 5 
+PC 5: Executing BEQ(4), $4 = $5 ? branch a length of 11 instructions 
+PC 6: Executing LW(35), $6 = M[$1 + 0] 
+Reg $6 = 537004032 
+PC 7: Executing LW(35), $7 = M[$2 + 0] 
+Reg $7 = 537004032 
+PC 8: Executing ADD(0), $8 = $6 + $7 (function: 32) 
+Reg $8 = 1074008064 
+PC 9: Executing SW(43), M[$3 + 0] = $8 
+PC 10: Executing LW(35), $8 = M[$3 + 0] 
+Reg $8 = 1074008064 
+PC 11: Executing ADDI(8), $5 = $5 + 1 
+Reg $5 = 3 
+PC 12: Executing ADDI(8), $1 = $1 + 4 
+Reg $1 = 76 
+PC 13: Executing ADDI(8), $2 = $2 + 4 
+Reg $2 = 116 
+PC 14: Executing ADDI(8), $3 = $3 + 4 
+Reg $3 = 3084 
+PC 15: Executing J(2), Jump to instruction 5 
+PC 5: Executing BEQ(4), $4 = $5 ? branch a length of 11 instructions 
+PC 6: Executing LW(35), $6 = M[$1 + 0] 
+Reg $6 = 537004032 
+PC 7: Executing LW(35), $7 = M[$2 + 0] 
+Reg $7 = 537004032 
+PC 8: Executing ADD(0), $8 = $6 + $7 (function: 32) 
+Reg $8 = 1074008064 
+PC 9: Executing SW(43), M[$3 + 0] = $8 
+PC 10: Executing LW(35), $8 = M[$3 + 0] 
+Reg $8 = 1074008064 
+PC 11: Executing ADDI(8), $5 = $5 + 1 
+Reg $5 = 4 
+PC 12: Executing ADDI(8), $1 = $1 + 4 
+Reg $1 = 80 
+PC 13: Executing ADDI(8), $2 = $2 + 4 
+Reg $2 = 120 
+PC 14: Executing ADDI(8), $3 = $3 + 4 
+Reg $3 = 3088 
+PC 15: Executing J(2), Jump to instruction 5 
+PC 5: Executing BEQ(4), $4 = $5 ? branch a length of 11 instructions 
+PC 6: Executing LW(35), $6 = M[$1 + 0] 
+Reg $6 = 537004032 
+PC 7: Executing LW(35), $7 = M[$2 + 0] 
+Reg $7 = 537004032 
+PC 8: Executing ADD(0), $8 = $6 + $7 (function: 32) 
+Reg $8 = 1074008064 
+PC 9: Executing SW(43), M[$3 + 0] = $8 
+PC 10: Executing LW(35), $8 = M[$3 + 0] 
+Reg $8 = 1074008064 
+PC 11: Executing ADDI(8), $5 = $5 + 1 
+Reg $5 = 5 
+PC 12: Executing ADDI(8), $1 = $1 + 4 
+Reg $1 = 84 
+PC 13: Executing ADDI(8), $2 = $2 + 4 
+Reg $2 = 124 
+PC 14: Executing ADDI(8), $3 = $3 + 4 
+Reg $3 = 3092 
+PC 15: Executing J(2), Jump to instruction 5 
+PC 5: Executing BEQ(4), $4 = $5 ? branch a length of 11 instructions 
+PC 6: Executing LW(35), $6 = M[$1 + 0] 
+Reg $6 = 537004032 
+PC 7: Executing LW(35), $7 = M[$2 + 0] 
+Reg $7 = 537004032 
+PC 8: Executing ADD(0), $8 = $6 + $7 (function: 32) 
+Reg $8 = 1074008064 
+PC 9: Executing SW(43), M[$3 + 0] = $8 
+PC 10: Executing LW(35), $8 = M[$3 + 0] 
+Reg $8 = 1074008064 
+PC 11: Executing ADDI(8), $5 = $5 + 1 
+Reg $5 = 6 
+PC 12: Executing ADDI(8), $1 = $1 + 4 
+Reg $1 = 88 
+PC 13: Executing ADDI(8), $2 = $2 + 4 
+Reg $2 = 128 
+PC 14: Executing ADDI(8), $3 = $3 + 4 
+Reg $3 = 3096 
+PC 15: Executing J(2), Jump to instruction 5 
+PC 5: Executing BEQ(4), $4 = $5 ? branch a length of 11 instructions 
+PC 6: Executing LW(35), $6 = M[$1 + 0] 
+Reg $6 = 537004032 
+PC 7: Executing LW(35), $7 = M[$2 + 0] 
+Reg $7 = 537004032 
+PC 8: Executing ADD(0), $8 = $6 + $7 (function: 32) 
+Reg $8 = 1074008064 
+PC 9: Executing SW(43), M[$3 + 0] = $8 
+PC 10: Executing LW(35), $8 = M[$3 + 0] 
+Reg $8 = 1074008064 
+PC 11: Executing ADDI(8), $5 = $5 + 1 
+Reg $5 = 7 
+PC 12: Executing ADDI(8), $1 = $1 + 4 
+Reg $1 = 92 
+PC 13: Executing ADDI(8), $2 = $2 + 4 
+Reg $2 = 132 
+PC 14: Executing ADDI(8), $3 = $3 + 4 
+Reg $3 = 3100 
+PC 15: Executing J(2), Jump to instruction 5 
+PC 5: Executing BEQ(4), $4 = $5 ? branch a length of 11 instructions 
+PC 6: Executing LW(35), $6 = M[$1 + 0] 
+Reg $6 = 537004032 
+PC 7: Executing LW(35), $7 = M[$2 + 0] 
+Reg $7 = 537004032 
+PC 8: Executing ADD(0), $8 = $6 + $7 (function: 32) 
+Reg $8 = 1074008064 
+PC 9: Executing SW(43), M[$3 + 0] = $8 
+PC 10: Executing LW(35), $8 = M[$3 + 0] 
+Reg $8 = 1074008064 
+PC 11: Executing ADDI(8), $5 = $5 + 1 
+Reg $5 = 8 
+PC 12: Executing ADDI(8), $1 = $1 + 4 
+Reg $1 = 96 
+PC 13: Executing ADDI(8), $2 = $2 + 4 
+Reg $2 = 136 
+PC 14: Executing ADDI(8), $3 = $3 + 4 
+Reg $3 = 3104 
+PC 15: Executing J(2), Jump to instruction 5 
+PC 5: Executing BEQ(4), $4 = $5 ? branch a length of 11 instructions 
+PC 6: Executing LW(35), $6 = M[$1 + 0] 
+Reg $6 = 537004032 
+PC 7: Executing LW(35), $7 = M[$2 + 0] 
+Reg $7 = 537004032 
+PC 8: Executing ADD(0), $8 = $6 + $7 (function: 32) 
+Reg $8 = 1074008064 
+PC 9: Executing SW(43), M[$3 + 0] = $8 
+PC 10: Executing LW(35), $8 = M[$3 + 0] 
+Reg $8 = 1074008064 
+PC 11: Executing ADDI(8), $5 = $5 + 1 
+Reg $5 = 9 
+PC 12: Executing ADDI(8), $1 = $1 + 4 
+Reg $1 = 100 
+PC 13: Executing ADDI(8), $2 = $2 + 4 
+Reg $2 = 140 
+PC 14: Executing ADDI(8), $3 = $3 + 4 
+Reg $3 = 3108 
+PC 15: Executing J(2), Jump to instruction 5 
+PC 5: Executing BEQ(4), $4 = $5 ? branch a length of 11 instructions 
+PC 6: Executing LW(35), $6 = M[$1 + 0] 
+Reg $6 = 537004032 
+PC 7: Executing LW(35), $7 = M[$2 + 0] 
+Reg $7 = 537004032 
+PC 8: Executing ADD(0), $8 = $6 + $7 (function: 32) 
+Reg $8 = 1074008064 
+PC 9: Executing SW(43), M[$3 + 0] = $8 
+PC 10: Executing LW(35), $8 = M[$3 + 0] 
+Reg $8 = 1074008064 
+PC 11: Executing ADDI(8), $5 = $5 + 1 
+Reg $5 = 10 
+PC 12: Executing ADDI(8), $1 = $1 + 4 
+Reg $1 = 104 
+PC 13: Executing ADDI(8), $2 = $2 + 4 
+Reg $2 = 144 
+PC 14: Executing ADDI(8), $3 = $3 + 4 
+Reg $3 = 3112 
+PC 15: Executing J(2), Jump to instruction 5 
+PC 5: Executing BEQ(4), $4 = $5 ? branch a length of 11 instructions 
+PC 16: Executing EOP(63) 
+Exiting because the exit state was reached 
